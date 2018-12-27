@@ -1,0 +1,181 @@
+body {
+    background:rgb(59, 55, 55);
+    min-height:100%;
+    font-family: 'Signika', sans-serif;
+}
+
+nav .navbar-brand
+{
+    /* size for brand */
+    font-size: xx-large;
+}
+
+nav .navbar-brand img {
+    width:auto;
+    height:1.5rem;
+    margin-bottom:0.8rem;
+}
+
+#navSearch {
+    width:60%;
+}
+
+#fullLogo {
+    height:3rem;
+}
+
+
+main .form-control
+{
+    /* center form controls */
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+
+main
+{
+    /* scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* center contents */
+    text-align: center;
+}
+
+
+main img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+}
+
+footer {
+    background-color: #ebebeb;
+    margin-top: 1.5rem;
+    padding: 1.0rem;
+}
+
+h1 {
+    color: #2F3539;
+    font-size: 2.8rem;
+}
+
+h2 {
+    color: #2F3539;
+    font-size: 2.2rem;
+}
+
+
+
+h4 {
+    color: #2E3135;
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+}
+
+p {
+    color: #2F3539;
+    margin: 0 auto;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+li {
+    color: #2F3539;
+    margin: 0 auto;
+}
+
+.main-header {
+    background-image: url('banner.jpg');
+    background-repeat: no-repeat;
+    padding: 0% 0% 10% 0%;
+    position: relative;
+    text-align: center;
+}
+
+.container-fluid {
+    padding: 2%;
+    max-width: 90%;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus {
+    background-color: #272285;
+    border-color: #272285;
+}
+
+.content-box-white {
+    padding: 2% 8% 2% 8%;
+    background-color: white;
+}
+
+.image-fit {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.scrolled {
+    background: black;
+    transition: background 200ms;
+}
+
+#about {
+    background: #0A1F02;
+    background: -webkit-linear-gradient(top right, #0A1F02, #0F1510);
+    background: -moz-linear-gradient(top right, #0A1F02, #0F1510);
+    background: linear-gradient(top right, #0A1F02, #0F1510);
+}
+
+#firstSection {
+    text-align: left;
+    color: white;
+    background-image: url("noodles.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+    padding-top: 80px;
+    padding-bottom: 35px;
+}
+
+#firstContent {
+    color:white;
+    min-height: 170px;
+    text-shadow: 2px 2px #000000;
+}
+
+nav {
+    background: rgba(0, 0, 0, 1);
+}
+
+#navbarSupportedContent {
+    padding-bottom:20px;
+}
+
+@media (min-width: 576px) {
+    #firstSection {
+      padding-top: 100px;
+      padding-bottom: 40px;
+    }
+    #navbarSupportedContent {
+        padding-bottom:0px;
+    }
+}
+
+@media (min-width: 768px) {
+    #firstSection {
+      padding-top: 200px;
+      padding-bottom: 100px;
+    }
+    nav {
+        background: rgba(0, 0, 0, 0);
+    }
+    #navSearch {
+        width:inherit;
+    }
+}
