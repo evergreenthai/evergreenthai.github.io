@@ -2,7 +2,6 @@ html, body {
     height: 100%;
     font-family: "PT Sans", sans-serif;
 }
-
 .navbar-nav > li{
     margin-left:10px;
     margin-right:10px;
@@ -28,7 +27,6 @@ html, body {
 #skipDishesContainer {
     width: 100%;
     max-width: 150px;
-    margin: 0 auto;
 }
 #evergreenInfo {
     border-radius: 5;
@@ -74,3 +72,4 @@ html, body {
     padding: 10%;
     border-radius: 0 !important;
 }
+
