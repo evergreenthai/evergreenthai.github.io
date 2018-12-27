@@ -12,7 +12,7 @@ html, body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    padding: 12%;
+    padding: 10%;
     border-radius: 0 !important;
 }
 .bg-brown {
@@ -22,7 +22,7 @@ html, body {
     color: rgb(255, 255, 255);
 }
 .jumbotron {
-    background-color:black;
+    background-color: #0A5C07;
     border-radius:0 !important;
 }
 #skipDishesContainer {
@@ -44,9 +44,33 @@ html, body {
 	0px 8px 13px rgba(0,0,0,0.2),
 	0px 18px 23px rgba(0,0,0,0.2);
 }
-#homeImages{
-    height: 150px;
-    max-height: 20%
-    max-width: 100%;
+#homeImages {
+    max-height: 20%;
+    width: 100vw;
 }
 
+#cateringBanner {
+    background-image: url("https://images.unsplash.com/photo-1533142146849-4620b8191531?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 10%;
+    border-radius: 0 !important;
+}
+
+#aboutBanner {
+    background-image: url("inside.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 10%;
+    border-radius: 0 !important;
+}
+#menuBanner {
+    background-image: url("inside.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 10%;
+    border-radius: 0 !important;
+}
