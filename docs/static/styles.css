@@ -24,13 +24,6 @@ html, body {
     background-color: #0A5C07;
     border-radius:0 !important;
 }
-.btn-primary {
-    background-color: #0A5C07;
-    border: 0px;
-}
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
-    background-color: rgb(27, 117, 23);
-}
 .jumbotron h1{
     font-size: 3.4em;
     text-shadow: 2px 4px 3px rgba(0,0,0,0.6),
