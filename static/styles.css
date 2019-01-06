@@ -1,0 +1,48 @@
+html, body {
+    height: 100%;
+    font-family: "PT Sans", sans-serif;
+}
+.navbar-nav > li{
+    margin-left:10px;
+    margin-right:10px;
+}
+#homeBanner {
+    background: url("eating.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 10%;
+    border-radius: 0 !important;
+}
+.bg-brown {
+    background-color:rgba(71, 69, 66, 1.0);
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: rgb(255, 255, 255);
+}
+.jumbotron {
+    background-color: #0A5C07;
+    border-radius:0 !important;
+}
+.jumbotron h1{
+    font-size: 3.4em;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.6),
+	0px 8px 13px rgba(0,0,0,0.2),
+	0px 18px 23px rgba(0,0,0,0.2);
+}
+#cateringBanner {
+    background-image: url("https://images.unsplash.com/photo-1533142146849-4620b8191531?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 10%;
+    border-radius: 0 !important;
+}
+#aboutBanner {
+    background-image: url("inside.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 10%;
+    border-radius: 0 !important;
+}
