@@ -87,6 +87,33 @@
             </div>
         </div>
     </div>
+    <!-- instagram feeds on site -->
+    <head>
+        <title>Instafeed on Your Website</title>
+        <style type="text/css">
+            a img{
+                width: 16.66%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style="text-align: center">   </h1>
+            <div id="instafeed-container"></div>
+        <script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
+        <script type="text/javascript">
+        var userFeed = new Instafeed({
+            get: 'user',
+            target: "instafeed-container",
+            resolution: 'low_resolution',
+            accessToken: 'IGQVJVQ01uckJjRy1pZAGpETzJxSHpJb3hGLUVQcnFYYjV3am41OHloS1dmWlQzRzdWUTNRNElwLWZAmS0c5OGZA4Q284UmJZAVU82VzRPX3NOdGRwbGRKdU9EX2FyLWdGMWNHV0lpakpJNzNsMm9vSi1IaAZDZD'
+        });
+        userFeed.run();
+        </script>
+    </body>
+     <!-- end-instagram feeds on site -->
+    
+    
+    
     <div class="d-none d-md-block">
         <div id= "homeImages" class="d-none d-flex align-items-center">
             <img class="justify-content-around" src="images/main1.jpeg" width="20%">
