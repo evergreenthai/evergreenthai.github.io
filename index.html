@@ -18,111 +18,886 @@
     <title> Evergreen Thai Restaurant</title>
 </head>
 
+<!-- style for copy -->
+<style>
+   .bee-row-1 .bee-col-1,
+        .bee-row-1 .bee-col-2,
+        .bee-row-10 .bee-col-1,
+        .bee-row-10 .bee-col-2,
+        .bee-row-11 .bee-col-1,
+        .bee-row-2 .bee-col-1,
+        .bee-row-2 .bee-col-2,
+        .bee-row-3 .bee-col-1,
+        .bee-row-3 .bee-col-2,
+        .bee-row-3 .bee-col-3,
+        .bee-row-4 .bee-col-1,
+        .bee-row-5 .bee-col-1,
+        .bee-row-5 .bee-col-2,
+        .bee-row-6 .bee-col-1,
+        .bee-row-7 .bee-col-1,
+        .bee-row-7 .bee-col-2,
+        .bee-row-7 .bee-col-3,
+        .bee-row-8 .bee-col-3,
+        .bee-row-8 .bee-col-4,
+        .bee-row-9 .bee-col-1 {
+            border-bottom: 0 solid transparent;
+            border-left: 0 solid transparent;
+            border-right: 0 solid transparent;
+            border-top: 0 solid transparent
+        }
+
+        body {
+            background-color: #ebebeb;
+            color: #000;
+            font-family: Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif
+        }
+
+        a {
+            color: #fff
+        }
+
+    .bee-row-1  {
+        background-color: #7ca439;
+        background-repeat: no-repeat
+    }
+
+    .bee-row-3,
+    .bee-row-4,
+    .bee-row-6,
+    .bee-row-6 .bee-row-content {
+        background-color: #fff;
+        background-repeat: no-repeat
+    }
+
+       
+        .bee-row-10 {
+            background-color: #7ca439;
+            background-repeat: no-repeat
+        }
+
+        .bee-row-1 .bee-col-1 {
+            padding-bottom: 10px;
+            padding-left: 60px;
+            padding-top: 10px
+        }
+
+        .bee-row-1 .bee-col-1 .bee-block-1 {
+            padding-left: 60px;
+            width: 100%
+        }
+
+        .bee-row-1 .bee-col-2 {
+            padding-bottom: 10px;
+            padding-right: 60px;
+            padding-top: 10px
+        }
+
+        .bee-row-1 .bee-col-2 .bee-block-1 li,
+        .bee-row-4 .bee-col-1 .bee-block-1,
+        .bee-row-4 .bee-col-1 .bee-block-3,
+        .bee-row-5 .bee-col-1 .bee-block-2,
+        .bee-row-5 .bee-col-1 .bee-block-3,
+        .bee-row-5 .bee-col-1 .bee-block-4,
+        .bee-row-5 .bee-col-2 .bee-block-2,
+        .bee-row-5 .bee-col-2 .bee-block-3,
+        .bee-row-5 .bee-col-2 .bee-block-4,
+        .bee-row-5 .bee-col-3 .bee-block-2,
+        .bee-row-5 .bee-col-3 .bee-block-3,
+        .bee-row-5 .bee-col-3 .bee-block-4 {
+            padding: 10px
+        }
+
+        .bee-row-1 .bee-col-2 .bee-block-1 li a {
+            color: #ffffff
+        }
+
+        .bee-row-1 .bee-col-2 .bee-block-1 {
+            color: #8e1739;
+            font-family: inherit;
+            font-size: 16px;
+            padding-left: 60px;
+            padding-right: 60px;
+            padding-top: 10px;
+            text-align: right
+        }
+
+    .bee-row-2 {
+        background-color: #fff;
+        background-image: url(static/eating.jpeg);
+        background-position: center;
+        background-repeat: no-repeat
+    }
+
+        .bee-row-10 .bee-row-content,
+        .bee-row-11 .bee-row-content,
+        .bee-row-2 .bee-row-content,
+        .bee-row-3 .bee-row-content,
+        .bee-row-4 .bee-row-content,
+        .bee-row-5,
+        .bee-row-5 .bee-row-content,
+        .bee-row-9 .bee-row-content {
+            background-repeat: no-repeat
+        }
+
+        .bee-row-10 .bee-col-2,
+        .bee-row-2 .bee-col-1,
+        .bee-row-2 .bee-col-2,
+        .bee-row-6 .bee-col-1 {
+            padding-bottom: 5px;
+            padding-top: 5px
+        }
+
+        .bee-row-2 .bee-col-1 .bee-block-2,
+        .bee-row-2 .bee-col-1 .bee-block-3,
+        .bee-row-2 .bee-col-1 .bee-block-4,
+        .bee-row-2 .bee-col-1 .bee-block-5 {
+            padding-left: 20px;
+            padding-right: 20px;
+            text-align: center;
+            width: 100%
+        }
+
+        .bee-row-2 .bee-col-1 .bee-block-6 {
+            text-align: right;
+            padding: 20px
+        }
+
+        .bee-row-3 .bee-col-2,
+        .bee-row-7 .bee-col-2 {
+            padding-bottom: 30px;
+            padding-top: 30px
+        }
+
+        .bee-row-3 .bee-col-2 .bee-block-1,
+        .bee-row-7 .bee-col-2 .bee-block-1 {
+            text-align: center;
+            width: 100%;
+            padding: 5px
+        }
+
+        .bee-row-3 .bee-col-2 .bee-block-2,
+        .bee-row-7 .bee-col-2 .bee-block-2 {
+            padding: 10px 30px
+        }
+
+        .bee-row-3 .bee-col-2 .bee-block-3 {
+            text-align: center;
+            padding: 10px 20px
+        }
+
+        .bee-row-4 .bee-col-1 {
+            padding-bottom: 20px
+        }
+
+        .bee-row-4 .bee-col-1 .bee-block-2 {
+            text-align: center;
+            width: 100%;
+            padding: 35px 5px
+        }
+
+        .bee-row-10 .bee-col-1,
+        .bee-row-5 .bee-col-1 {
+            padding-bottom: 5px;
+            padding-left: 60px;
+            padding-top: 5px
+        }
+
+        .bee-row-5 .bee-col-1 .bee-block-1,
+        .bee-row-5 .bee-col-2 .bee-block-1,
+        .bee-row-5 .bee-col-3 .bee-block-1,
+        .bee-row-8 .bee-col-3 .bee-block-1 {
+            width: 100%
+        }
+
+        .bee-row-5 .bee-col-1 .bee-block-5,
+        .bee-row-5 .bee-col-2 .bee-block-5,
+        .bee-row-5 .bee-col-3 .bee-block-5 {
+            text-align: center;
+            padding: 10px
+        }
+
+        .bee-row-5 .bee-col-2 {
+            padding: 5px 30px
+        }
+
+        .bee-row-8 .bee-col-1,
+        .bee-row-8 .bee-col-2 {
+            border-bottom: 0 solid transparent;
+            border-left: 0 solid transparent;
+            border-right: 0 solid transparent;
+            border-top: 0 solid transparent;
+            padding-left: 15px
+        }
+
+        .bee-row-10 .bee-col-3,
+        .bee-row-5 .bee-col-3 {
+            border-bottom: 0 solid transparent;
+            border-left: 0 solid transparent;
+            border-right: 0 solid transparent;
+            border-top: 0 solid transparent;
+            padding-bottom: 5px;
+            padding-right: 60px;
+            padding-top: 5px
+        }
+
+        .bee-row-6 .bee-col-1 .bee-block-1 {
+            padding: 25px 10px 10px
+        }
+
+         .bee-row-7,
+         .bee-row-8 {
+          background-color: #8e1739;
+           background-repeat: no-repeat
+          }
+
+        .bee-row-7 .bee-row-content,
+        .bee-row-8 .bee-row-content {
+            background-color: #8e1739;
+            background-repeat: no-repeat
+        }
+
+        .bee-row-8 .bee-col-1 {
+            padding-right: 10px
+        }
+
+        .bee-row-8 .bee-col-2 {
+            padding-right: 15px
+        }
+
+        .bee-row-8 .bee-col-2 .bee-block-2 {
+            padding: 5px 10px
+        }
+
+        .bee-row-8 .bee-col-2 .bee-block-3 {
+            padding: 5px 10px 10px
+        }
+
+        .bee-row-11,
+        .bee-row-9 {
+            background-color: #008661;
+            background-repeat: no-repeat
+        }
+
+        .bee-row-10 .bee-col-1 .bee-block-1,
+        .bee-row-10 .bee-col-2 .bee-block-1,
+        .bee-row-10 .bee-col-2 .bee-block-2,
+        .bee-row-10 .bee-col-2 .bee-block-3 {
+            padding: 10px 10px 10px 20px
+        }
+
+        .bee-row-10 .bee-col-1 .bee-block-2 {
+            padding: 10px 20px
+        }
+
+        .bee-row-10 .bee-col-1 .bee-block-3 {
+            text-align: left;
+            padding: 10px
+        }
+
+        .bee-row-10 .bee-col-3 .bee-block-1 {
+            padding: 10px 10px 10px 15px
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body,
+        p {
+            margin: 0
+        }
+
+        .bee-menu .bee-hamburger-trigger {
+            display: none
+        }
+
+        .bee-row-content {
+            max-width: 1440px;
+            margin: 0 auto;
+            display: flex
+        }
+
+        .bee-menu ul.bee-horizontal li {
+            display: inline-block
+        }
+
+        .bee-row-content .bee-col-w1 {
+            flex: 1
+        }
+
+        .bee-row-content .bee-col-w2 {
+            flex: 2
+        }
+
+        .bee-row-content .bee-col-w3 {
+            flex: 3
+        }
+
+        .bee-row-content .bee-col-w4 {
+            flex: 4
+        }
+
+        .bee-row-content .bee-col-w6 {
+            flex: 6
+        }
+
+        .bee-row-content .bee-col-w8 {
+            flex: 8
+        }
+
+        .bee-row-content .bee-col-w11 {
+            flex: 11
+        }
+
+        .bee-row-content .bee-col-w12 {
+            flex: 12
+        }
+
+        .bee-image img {
+            display: block;
+            width: 100%
+        }
+
+        .bee-divider,
+        .bee-image {
+            overflow: auto
+        }
+
+        .bee-divider .bee-center,
+        .bee-image .bee-center {
+            margin: 0 auto
+        }
+
+        .bee-text {
+            overflow-wrap: anywhere
+        }
+
+        .bee-social .icon img {
+            max-height: 32px
+        }
+
+        .bee-button .content {
+            text-align: center
+        }
+
+        .bee-button a,
+        .bee-menu ul li a {
+            text-decoration: none
+        }
+
+        .bee-heading h1 {
+            margin-top: 0;
+            margin-bottom: 0
+        }
+
+        .bee-menu .bee-hamburger-controls {
+            cursor: pointer;
+            display: inline-block;
+            position: relative
+        }
+
+        .bee-menu .bee-hamburger-controls span {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            transition: .12s ease-in-out
+        }
+
+        .bee-menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0
+        }
+
+        @media (max-width:768px) {
+            .bee-row-1 .bee-col-2 .bee-block-1 .bee-hamburger-controls {
+                width: 36px;
+                height: 36px;
+                background-color: #8e1739            }
+
+            .bee-row-1 .bee-col-2 .bee-block-1 .bee-hamburger-controls span {
+                width: 18px;
+                height: 18px
+            }
+
+            .bee-row-1 .bee-col-2 .bee-block-1 .bee-hamburger-controls span.bee-hamburger-open {
+                background-image: url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjY0IiB2aWV3Qm94PSIwIDAgNjQgNjQiIHdpZHRoPSI2NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjZmZmZmZmIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxyZWN0IGhlaWdodD0iMTIiIHJ4PSI2IiB3aWR0aD0iNjQiLz48cmVjdCBoZWlnaHQ9IjEyIiByeD0iNiIgd2lkdGg9IjY0IiB5PSI1MiIvPjxyZWN0IGhlaWdodD0iMTIiIHJ4PSI2IiB3aWR0aD0iNjQiIHk9IjI2Ii8+PC9nPjwvc3ZnPg==);
+                transform: translate(-50%, -50%) scaleY(1)
+            }
+
+            .bee-row-1 .bee-col-2 .bee-block-1 .bee-hamburger-controls span.bee-hamburger-close {
+                background-image: url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjY0IiB2aWV3Qm94PSIwIDAgNjQgNjQiIHdpZHRoPSI2NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjZmZmZmZmIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxyZWN0IGhlaWdodD0iMTIiIHJ4PSI2IiB0cmFuc2Zvcm09Im1hdHJpeCgtLjcwNzEwNjc4IC0uNzA3MTA2NzggLjcwNzEwNjc4IC0uNzA3MTA2NzggMzEuOTkxMzc4IDc3LjIzNDAxOSkiIHdpZHRoPSI4MiIgeD0iLTkuMDA4NjIyIiB5PSIyNS45OTEzNzgiLz48cmVjdCBoZWlnaHQ9IjEyIiByeD0iNiIgdHJhbnNmb3JtPSJtYXRyaXgoLS43MDcxMDY3OCAuNzA3MTA2NzggLS43MDcxMDY3OCAtLjcwNzEwNjc4IDc3LjgxOTgwNiAzMi4yMzQwMTkpIiB3aWR0aD0iODIiIHg9Ii04Ljc2NTk4MSIgeT0iMjYuMjM0MDE5Ii8+PC9nPjwvc3ZnPg==);
+                transform: translate(-50%, -50%) scaleY(0)
+            }
+
+            .bee-row-1 .bee-col-2 .bee-block-1 ul.with-bee-hamburger {
+                background-color: #8e1739
+            }
+
+            .bee-row-1 .bee-col-2 .bee-block-1 ul.with-bee-hamburger li {
+                color: #ffffff
+            }
+
+            #bee-hamburger-mptgzvw:checked~.bee-hamburger-controls .bee-hamburger-open {
+                transform: translate(-50%, -50%) scaleY(0)
+            }
+
+            #bee-hamburger-mptgzvw:checked~.bee-hamburger-controls .bee-hamburger-close {
+                transform: translate(-50%, -50%) scaleY(1)
+            }
+
+            #bee-hamburger-mptgzvw:checked~ul,
+            .bee-row-content:not(.no_stack) {
+                display: block
+            }
+
+            .bee-menu ul.with-bee-hamburger span {
+                display: none
+            }
+
+            .bee-menu ul.with-bee-hamburger {
+                display: none;
+                padding: 5px 0;
+                position: relative;
+                top: -4px
+            }
+
+            .bee-menu ul.with-bee-hamburger li {
+                display: block;
+                text-align: center
+            }
+
+            .bee-menu ul.with-bee-hamburger li a {
+                text-decoration: none
+            }
+        }
+  </style>
 <body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-brown">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="static/evergreenthai.png" height="40" class="d-inline-block align-top" alt=""></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="eatinmenu.pdf" target="_blank">Menu</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="catering.html">Catering</a>
-                    </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" data-glf-cuid="a7b41d88-dc47-4d7f-a36e-72c7b1128c0d" data-glf-ruid="bc44a75d-d224-489b-9cef-840bdbe1a85d">Order Online</a>
-                    </li> -->
-                    <span class="btn btn-success" data-glf-cuid="a7b41d88-dc47-4d7f-a36e-72c7b1128c0d" data-glf-ruid="bc44a75d-d224-489b-9cef-840bdbe1a85d">Order Online</span> 
-                </ul>
-            </div>
-        </div>     
-    </nav>
-
-    <div class="jumbotron mb-0" id="homeBanner">
-        <div class="container text-white">
-            <h1 class="py-2 py-md-3" id="evergreenFont">Evergreen Thai Restaurant</h1>
-            <h4 class="text-light d-none d-md-block">Healthy, Home-Style Thai Food</h4>
-            
-        </div> 
-    </div>
-    
-    <div class="bg-light py-3 px-3 py-md-4 text-dark">      
-        <div class="container bg-light">
-            <div class="row">
-                <div class="order-3 order-md-2 col-md-3">
-                    <p>
-                        <strong>Address: </strong><a class="text-dark" href="https://www.google.com/maps/place/Evergreen+Thai+Restaurant/@43.655057,-79.388523,17z/data=!3m1!4b1!4m5!3m4!1s0x882b34c95bdaf383:0xc31d09995345ffde!8m2!3d43.655057!4d-79.386329?hl=en-US" target="_blank">175 Dundas St West,
-                            Toronto, ON, M5G 1C7</a>
-                    </p>     
-                    <p>
-                        <strong>Hours: </strong>11am-9pm (Mon-Sat).
-                    </p>  
-                    <h5 class="mt-3"><a class="text-dark" href="tel:416-581-8668"><i class="fas fa-phone-volume"></i> 416.581.8668</a></h5> 
-                </div>
-                
-                <div class="order-3 order-md-2 col-md-6">
-                    <p><em>"Very good price, delicious food and unique service. The best choice of a place to eat in Toronto.  We just loved it!"</em></p>
-                    <p><em>"This is my favorite pad thai restaurant in the city! They are attentive and accommodating whenever I mention my allergies. Try out this mom and pop restaurant!"</em></p>
-                </div>   
-                <div class="order-1 order-md-3 col-md-3 d-flex d-flex flex-column align-items-center align-items-md-start ">
-                    <p class="mb-2"><strong> Over $25 Get A Free Crispy CHICKEN Wontons with Volcano Sauce </strong.></p>
-                    <span class="btn btn-success btn-lg" data-glf-cuid="a7b41d88-dc47-4d7f-a36e-72c7b1128c0d" data-glf-ruid="bc44a75d-d224-489b-9cef-840bdbe1a85d">
-                        Order for Curbside Pickup
-                    </span>
-                    <p><strong>For delivery, find us on Uber Eats, SkipTheDishes or DoorDash</strong></p>
-                </div>
-            </div>
+    <!-- first line -->
+   <div class="bee-page-container">
+     <div class="bee-row bee-row-1">
+      <div class="bee-row-content no_stack">
+       <div class="bee-col bee-col-1 bee-col-w6">
+        <div class="bee-block bee-block-1 bee-image">
+         <a href="https://evergreenthai.com">
+          <img alt="FRESH" class="bee-fixedwidth" src="static/logoEvergreen.png" style="max-width:80px;"/>
+         </a>
         </div>
-    </div>
-
-    
-   <div class="ins" >
-      <style type="text/css">
-                a img{
-                    width: 20%;
-                }
-      </style>
-      <div id="instafeed-container">
-        <script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
-        <script type="text/javascript">
-        var userFeed = new Instafeed({
-            get: 'user',
-            target: "instafeed-container",
-            resolution: 'low_resolution',
-            accessToken: 'IGQVJYWTIteDdIR0hUQk01a09LNmNrMGhTRmFuRkFnZA0RWdkZAXZAWpBV21VU2tDNWF6dDVHd2I5SmxMbXc0blRqdWdQc2trUndOTFpnR3Q3OUIzMnhMRXBTbFV3VVB5TU1mRzI1cU5JWXg4RUhaajlfRAZDZD'
-        });
-        userFeed.run();
-        </script>
-        
+       </div>
+      <div class="bee-col bee-col-2 bee-col-w6">
+       <div class="bee-block bee-block-1 bee-menu">
+        <nav class="bee-menu">
+         <input class="bee-hamburger-trigger" id="bee-hamburger-mptgzvw" type="checkbox"/>
+          <label class="bee-hamburger-controls" for="bee-hamburger-mptgzvw">
+           <span class="bee-hamburger-open"></span>
+           <span class="bee-hamburger-close"></span>
+          </label>
+           <ul class="bee-horizontal with-bee-hamburger">
+               <li>
+                   <a href="index.html" target="_self" title="">Home</a>
+               </li>
+               <li>
+                   <a href="about.html"_self" title="">About Us</a>
+               </li>
+               <li>
+                   <a href="eatinmenu.pdf" target="_self" title=""> Menu </a>
+               </li>
+               <li>
+                   <a href="catering.html" target="_self" title="">Catering</a>
+               </li>
+               <span class="btn btn-success" data-glf-cuid="a7b41d88-dc47-4d7f-a36e-72c7b1128c0d" data-glf-ruid="bc44a75d-d224-489b-9cef-840bdbe1a85d">Order Online</span>
+          </ul>
+        </nav>
+       </div>
       </div>
+     </div>
     </div>
+    <!-- copy end -->
     
     
-    <div class="d-none d-md-block">
-        <div id= "homeImages" class="d-none d-flex align-items-center">
-            <img class="justify-content-around" src="images/main1.jpeg" width="20%">
-            <img class="justify-content-around" src="images/main2.jpeg" width="20%">
-            <img class="justify-content-around" src="images/main3.jpeg" width="20%">
-            <img class="justify-content-around" src="images/main4.jpeg" width="20%">
-            <img class="justify-content-around" src="images/main5.jpeg" width="20%">
-        </div>
-    </div>
-    
+    <!-- 第二部分-->
 
-    <footer class="d-flex bg-brown text-light py-2 py-sm-2 py-md-3 font-weight-light">
+    <div class="bee-row bee-row-2">
+    <div class="bee-row-content">
+    <div class="bee-col bee-col-1 bee-col-w11">
+    <div class="bee-block bee-block-1 bee-divider">
+    <div class="spacer" style="height:45px;">
+    </div>
+    </div>
+    <div class="bee-block bee-block-2 bee-heading">
+    <h1 style="color:#156965;direction:ltr;font-family:Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;font-size:49px;font-weight:normal;letter-spacing:normal;line-height:120%;text-align:right;">
+    <span style="background-color: #f5f5f5;">
+    <strong>
+               Delicious
+             </strong>
+    </span>
+    </h1>
+    </div>
+    <div class="bee-block bee-block-3 bee-heading">
+    <h1 style="color:#156965;direction:ltr;font-family:Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;font-size:48px;font-weight:normal;letter-spacing:normal;line-height:120%;text-align:right;">
+    <span style="background-color: #f5f5f5;">
+    <strong>
+               Fresh
+             </strong>
+    </span>
+    </h1>
+    </div>
+    <div class="bee-block bee-block-4 bee-heading">
+    <h1 style="color:#156965;direction:ltr;font-family:Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;font-size:49px;font-weight:normal;letter-spacing:normal;line-height:120%;text-align:right;">
+    <span style="background-color: #f5f5f5;">
+    <strong>
+               Healthy
+             </strong>
+    </span>
+    </h1>
+    </div>
+    <div class="bee-block bee-block-5 bee-heading">
+    <h1 style="color:#156965;direction:ltr;font-family:Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;font-size:49px;font-weight:normal;letter-spacing:normal;line-height:120%;text-align:right;">
+    <span style="background-color: #f5f5f5;">
+    <strong>
+               Home-style
+              </strong>
+    </span>
+    </h1>
+    </div>
+    <div class="bee-block bee-block-6 bee-button">
+    <!-- add the order online button here-->
+    <span class="glf-button" data-glf-cuid="a7b41d88-dc47-4d7f-a36e-72c7b1128c0d" data-glf-ruid="bc44a75d-d224-489b-9cef-840bdbe1a85d"  style="font-size: 20px; line-height: 24px; background-color: #7ca439; border-bottom: 0px solid transparent; border-left: 0px solid transparent; border-radius: 4px; border-right: 0px solid transparent; border-top: 0px solid transparent; color: #ffffff; font-family: inherit; max-width: 100%; padding-bottom: 15px; padding-left: 30px; padding-right: 30px; padding-top: 15px; width: auto; display: inline-block;">Order Online</span>
+    <script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async ></script>
+    <span style="font-size: 16px; line-height: 200%; word-break: break-word;">
+    <span style="font-size: 20px; line-height: 40px;">
+
+    </span>
+    </span>
+    </a>
+    </div>
+    <div class="bee-block bee-block-7 bee-divider">
+    <div class="spacer" style="height:120px;">
+    </div>
+    </div>
+    </div>
+    <div class="bee-col bee-col-2 bee-col-w1">
+    <div class="bee-block bee-block-1 bee-divider">
+    <div class="spacer" style="height:5px;">
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="bee-row bee-row-3">
+    <div class="bee-row-content">
+    <div class="bee-col bee-col-1 bee-col-w2">
+    <div class="bee-block bee-block-1 bee-divider">
+    <div class="spacer" style="height:10px;">
+    </div>
+    </div>
+    </div>
+    <div class="bee-col bee-col-2 bee-col-w8">
+    <div class="bee-block bee-block-1 bee-heading">
+    <h1 style="color:#8e1739;direction:ltr;font-family:Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;font-size:29px;font-weight:normal;letter-spacing:normal;line-height:120%;text-align:center;">
+    <strong>
+             Delicious. Fresh. Healthy.
+            </strong>
+    </h1>
+    </div>
+    <div class="bee-block bee-block-2 bee-text">
+    <div class="bee-text-content" style="line-height: 150%; font-size: 12px; color: #555555; font-family: inherit;">
+    <p style="font-size: 14px; line-height: 21px; text-align: center;">
+    <span style="font-size: 16px; line-height: 24px;">
+              With food made fresh, from the highest quality, all healthy ingredients, taking a seat in Evergreen Thai doesn't have to be a compromise. Food that tastes great and makes you feel great.
+             </span>
+    </p>
+    </div>
+    </div>
+    <div class="bee-block bee-block-3 bee-button">
+    <a class="bee-button-content" href="https://evergreenthai.com/eatinmenu.pdf" style="font-size: 12px; line-height: 24px; background-color: #8e1739; border-bottom: 0px solid transparent; border-left: 0px solid transparent; border-radius: 4px; border-right: 0px solid transparent; border-top: 0px solid transparent; color: #ffffff; font-family: inherit; max-width: 100%; padding-bottom: 5px; padding-left: 35px; padding-right: 35px; padding-top: 5px; width: auto; display: inline-block;">
+    <span style="font-size: 16px; line-height: 200%; word-break: break-word;">
+    <strong>
+              View Menu
+              <span style="font-size: 18px; line-height: 36px;">
+               ›
+              </span>
+    </strong>
+    </span>
+    </a>
+    </div>
+    </div>
+    <div class="bee-col bee-col-3 bee-col-w2">
+    <div class="bee-block bee-block-1 bee-divider">
+    <div class="spacer" style="height:10px;">
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="bee-row bee-row-4">
+    <div class="bee-row-content">
+    <div class="bee-col bee-col-1 bee-col-w12">
+    <div class="bee-block bee-block-1 bee-divider">
+    <div class="bee-center" style="border-top:1px solid #B2D2C7;width:90%;">
+    </div>
+    </div>
+    <div class="bee-block bee-block-2 bee-heading">
+    <h1 style="color:#8e1739;direction:ltr;font-family:Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;font-size:55px;font-weight:normal;letter-spacing:normal;line-height:120%;text-align:center;">
+    <strong>
+             Seasonal Hits:
+            </strong>
+    </h1>
+    </div>
+    <div class="bee-block bee-block-3 bee-divider">
+    <div class="bee-center" style="border-top:1px solid #B2D2C7;width:90%;">
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="bee-row bee-row-5">
+    <div class="bee-row-content">
+    <div class="bee-col bee-col-1 bee-col-w4">
+    <div class="bee-block bee-block-1 bee-image">
+    <img alt="I'm an image" class="bee-center bee-autowidth" src="static/ChickenWontonsPoster.png" style="max-width:420px;"/>
+    </div>
+    <div class="bee-block bee-block-2 bee-text">
+    <div class="bee-text-content" style="line-height: 120%; font-size: 12px; font-family: inherit; color: #555555;">
+    <p style="font-size: 16px; line-height: 19px; text-align: center;">
+    <strong style="">
+              Chicken Wontons
+             </strong>
+    </p>
+    </div>
+    </div>
+    <div class="bee-block bee-block-3 bee-divider">
+    <div class="bee-center" style="border-top:1px solid #BBBBBB;width:100%;">
+    </div>
+    </div>
+    <div class="bee-block bee-block-4 bee-text">
+    <div class="bee-text-content" style="line-height: 120%; font-size: 12px; font-family: inherit; color: #555555;">
+    <p style="font-size: 14px; line-height: 16px; text-align: center;">
+             Crispy Chicken Wontons with the volcano sauce or Chicken Wonton Soup?
+            </p>
+    </div>
+    </div>
+
+    <!-- button-->
+    <!--
+    <div class="bee-block bee-block-5 bee-button">
+    <div class="bee-button-content" style="line-height: 32px; font-size: 16px; font-family: inherit; background-color: #8e1739; border-bottom: 0px solid transparent; border-left: 0px solid transparent; border-radius: 4px; border-right: 0px solid transparent; border-top: 0px solid transparent; color: #ffffff; max-width: 100%; padding-bottom: 5px; padding-left: 20px; padding-right: 20px; padding-top: 5px; width: auto; display: inline-block;">
+    <span style="font-size: 16px; margin: 0; line-height: 200%; word-break: break-word;">
+             Button
+            </span>
+    </div>
+    </div>-->
+
+    </div>
+    <div class="bee-col bee-col-2 bee-col-w4">
+    <div class="bee-block bee-block-1 bee-image">
+    <img alt="I'm an image" class="bee-center bee-autowidth" src="static/ThaiIcedTeaPoster.png" style="max-width:420px;"/>
+    </div>
+    <div class="bee-block bee-block-2 bee-text">
+    <div class="bee-text-content" style="line-height: 120%; font-size: 12px; font-family: inherit; color: #555555;">
+    <p style="font-size: 16px; line-height: 19px; text-align: center;">
+    <strong style="">
+              Thai Iced Tea
+             </strong>
+    </p>
+    </div>
+    </div>
+    <div class="bee-block bee-block-3 bee-divider">
+    <div class="bee-center" style="border-top:1px solid #BBBBBB;width:100%;">
+    </div>
+    </div>
+    <div class="bee-block bee-block-4 bee-text">
+    <div class="bee-text-content" style="line-height: 120%; font-size: 12px; font-family: inherit; color: #555555;">
+    <p style="font-size: 14px; line-height: 16px; text-align: center;">
+             Promotion now is $2 with meal, original price was $4.5 per cup</p>
+
+    </div>
+    </div>
+
+    <!-- button-->
+    <!--
+    <div class="bee-block bee-block-5 bee-button">
+    <div class="bee-button-content" style="line-height: 32px; font-size: 16px; font-family: inherit; background-color: #8e1739; border-bottom: 0px solid transparent; border-left: 0px solid transparent; border-radius: 4px; border-right: 0px solid transparent; border-top: 0px solid transparent; color: #ffffff; max-width: 100%; padding-bottom: 5px; padding-left: 20px; padding-right: 20px; padding-top: 5px; width: auto; display: inline-block;">
+    <span style="font-size: 16px; margin: 0; line-height: 200%; word-break: break-word;">
+             Button
+            </span>
+    </div>
+    </div> -->
+
+    </div>
+    <div class="bee-col bee-col-3 bee-col-w4">
+    <div class="bee-block bee-block-1 bee-image">
+    <img alt="I'm an image" class="bee-center bee-autowidth" src="static/lenmongrassChickenposter.png" style="max-width:420px;"/>
+    </div>
+    <div class="bee-block bee-block-2 bee-text">
+    <div class="bee-text-content" style="line-height: 120%; font-size: 12px; font-family: inherit; color: #555555;">
+    <p style="font-size: 16px; line-height: 19px; text-align: center;">
+    <strong style="">
+              Lemongrass Chicken
+              </strong>
+    </p>
+    </div>
+    </div>
+    <div class="bee-block bee-block-3 bee-divider">
+    <div class="bee-center" style="border-top:1px solid #BBBBBB;width:100%;">
+    </div>
+    </div>
+    <div class="bee-block bee-block-4 bee-text">
+    <div class="bee-text-content" style="line-height: 120%; font-size: 12px; font-family: inherit; color: #555555;">
+    <p style="font-size: 14px; line-height: 16px; text-align: center;">
+            Limited orders on Lemongrass Chicken with an Thai Iced Tea.
+            </p>
+    </div>
+    </div>
+
+    <!-- button-->
+    <!--
+    <div class="bee-block bee-block-5 bee-button">
+    <div class="bee-button-content" style="line-height: 32px; font-size: 16px; font-family: inherit; background-color: #8e1739; border-bottom: 0px solid transparent; border-left: 0px solid transparent; border-radius: 4px; border-right: 0px solid transparent; border-top: 0px solid transparent; color: #ffffff; max-width: 100%; padding-bottom: 5px; padding-left: 20px; padding-right: 20px; padding-top: 5px; width: auto; display: inline-block;">
+    <span style="font-size: 16px; margin: 0; line-height: 200%; word-break: break-word;">
+             Button
+            </span>
+    </div>
+    </div>-->
+
+    </div>
+    </div>
+    </div>
+    <div class="bee-row bee-row-6">
+    <div class="bee-row-content">
+    <div class="bee-col bee-col-1 bee-col-w12">
+    <div class="bee-block bee-block-1 bee-divider">
+    <div class="bee-center" style="border-top:1px solid #B2D2C7;width:90%;">
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="bee-row bee-row-7">
+    <div class="bee-row-content">
+    <div class="bee-col bee-col-1 bee-col-w2">
+    <div class="bee-block bee-block-1 bee-divider">
+    <div class="spacer" style="height:15px;">
+    </div>
+    </div>
+    </div>
+    <div class="bee-col bee-col-2 bee-col-w8">
+    <div class="bee-block bee-block-1 bee-heading">
+    <h1 style="color:#ffffff;direction:ltr;font-family:Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;font-size:29px;font-weight:normal;letter-spacing:normal;line-height:120%;text-align:center;">
+    <strong>
+             Promotion For Online Order.
+            </strong>
+    <br/>
+    </h1>
+    </div>
+    <div class="bee-block bee-block-2 bee-text">
+    <div class="bee-text-content" style="line-height: 150%; font-size: 12px; color: #ffffff; font-family: inherit;">
+    <p style="font-size: 14px; line-height: 21px; text-align: center;">
+    <span style="font-size: 16px; line-height: 24px;">
+    Over $25 Get A Free Crispy CHICKEN Wontons with Volcano Sauce
+             </span>
+    </p>
+    </div>
+    </div>
+    </div>
+    <div class="bee-col bee-col-3 bee-col-w2">
+    <div class="bee-block bee-block-1 bee-divider">
+    <div class="spacer" style="height:0px;">
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+    <style type="text/css">
+              a img{
+                  width: 20%;
+              }
+    </style>
+    <div id="instafeed-container">
+      <script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
+      <script type="text/javascript">
+      var userFeed = new Instafeed({
+          get: 'user',
+          target: "instafeed-container",
+          resolution: 'low_resolution',
+          accessToken: 'IGQVJYWTIteDdIR0hUQk01a09LNmNrMGhTRmFuRkFnZA0RWdkZAXZAWpBV21VU2tDNWF6dDVHd2I5SmxMbXc0blRqdWdQc2trUndOTFpnR3Q3OUIzMnhMRXBTbFV3VVB5TU1mRzI1cU5JWXg4RUhaajlfRAZDZD'
+      });
+      userFeed.run();
+      </script>
+      
+    </div>
+
+
+    <div class="bee-row bee-row-8">
+    <div class="bee-row-content">
+    <div class="bee-col bee-col-1 bee-col-w2">
+    <div class="bee-block bee-block-1 bee-divider">
+    <div class="spacer" style="height:15px;">
+    </div>
+    </div>
+    </div>
+    <div class="bee-col bee-col-2 bee-col-w4">
+    <div class="bee-block bee-block-1 bee-divider">
+    <div class="spacer" style="height:50px;">
+    </div>
+    </div>
+    <div class="bee-block bee-block-2 bee-text">
+    <div class="bee-text-content" style="line-height: 120%; font-size: 12px; color: #ffffff; font-family: inherit;">
+    <p style="font-size: 14px; line-height: 16px; text-align: left;">
+
+    <span style="font-size: 22px; line-height: 26px;">
+    <strong style="">
+    <span style="line-height: 14px;">
+    For delivery, find us on Uber Eats, SkipTheDishes or DoorDash.
+               </span>
+    </strong>
+    </span>
+    </p>
+    </div>
+    </div>
+    <div class="bee-block bee-block-3 bee-text">
+    <div class="bee-text-content" style="line-height: 120%; font-size: 12px; color: #ffffff; font-family: inherit;">
+    <p style="font-size: 14px; line-height: 16px; text-align: left;">
+    <span style="font-size: 26px; line-height: 31px;">
+    <strong style="">
+    <span style="line-height: 14px;">
+            外卖平台: 熊猫，饭团，FOD.
+               </span>
+    </strong>
+    </span>
+    </p>
+    </div>
+    </div>
+    <div class="bee-block bee-block-4 bee-divider">
+    <div class="spacer" style="height:50px;">
+    </div>
+    </div>
+    </div>
+    <div class="bee-col bee-col-3 bee-col-w4">
+    <div class="bee-block bee-block-1 bee-divider">
+    <div class="spacer" style="height:50px;">
+    </div>
+    </div>
+    <div class="bee-block bee-block-2 bee-image">
+    <a href="https://www.google.com/maps/place/Evergreen+Thai+Restaurant/@43.655057,-79.388523,17z/data=!3m1!4b1!4m5!3m4!1s0x882b34c95bdaf383:0xc31d09995345ffde!8m2!3d43.655057!4d-79.386329?hl=en-US">
+    <img alt="Phone App" class="bee-center bee-autowidth" src="static/map.png"  style="max-width:258px;"/></a>
+    </div>
+    </div>
+    <div class="bee-col bee-col-4 bee-col-w2">
+    <div class="bee-block bee-block-1 bee-divider">
+    <div class="spacer" style="height:50px;">
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <footer class="d-flex bg-green text-light py-2 py-sm-2 py-md-3 font-weight-light">
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 d-flex flex-column align-items-center align-items-sm-start">
@@ -130,11 +905,13 @@
                     <h3><a href="https://www.facebook.com/Evergreen.Thai.Restaurant" ><i class="fab fa-facebook pr-2"></i></a>
                         <a href="https://www.instagram.com/evergreen.thai" ><i class="fab fa-instagram px-2"></i></a></h3>
                         
-                    <small>evergreenthaifood@gmail.com</small>
-                    <small>Copyright © Evergreen Thai Restaurant</small>
+                        <a href="tel:+11234567890" <large>Phone: 416-581-8668</large></a>
+                        <a href="Email: evergreenthaifood@gmail.com">evergreenthaifood@gmail.com <large></large></a>
+                        <a href="https://www.google.com/maps/place/Evergreen+Thai+Restaurant/@43.655057,-79.388523,17z/data=!3m1!4b1!4m5!3m4!1s0x882b34c95bdaf383:0xc31d09995345ffde!8m2!3d43.655057!4d-79.386329?hl=en-US"><large>Address: 175 Dundas St West, Toronto, ON, M5G 1C7</large></a>
+                    <large>Copyright © Evergreen Thai Restaurant since 2007</large>
                 </div>
                 <div class="col-sm-6 pt-3 pt-sm-0 d-flex align-items-center justify-content-center justify-content-sm-end">
-                    <img src="static/evergreen-light.png" height="70">
+                    <img src="static/logoEvergreen.png" height="150">
                 </div>
             </div>
         </div>
