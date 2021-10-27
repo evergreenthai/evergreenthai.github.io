@@ -1,35 +1,40 @@
-<?php
-if (isset($_POST['sendMailBtn'])) {
-    $fromEmail = $_POST['fromEmail'];
-    $toEmail = $_POST['toEmail'];
-    $subjectName = $_POST['subject'];
-    $message = $_POST['message'];
-
-    $to = $toEmail;
-    $subject = $subjectName;
-    $headers = "MIME-Version: 1.0" . "\r\n";
-    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-    $headers .= 'From: '.$fromEmail.'<'.$fromEmail.'>' . "\r\n".'Reply-To: '.$fromEmail."\r\n" . 'X-Mailer: PHP/' . phpversion();
-    $message = '<!doctype html>
-			<html lang="en">
-			<head>
-				<meta charset="UTF-8">
-				<meta name="viewport"
-					  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-				<meta http-equiv="X-UA-Compatible" content="ie=edge">
-				<title>Document</title>
-			</head>
-			<body>
-			<span class="preheader" style="color: transparent; display: none; height: 0; max-height: 0; max-width: 0; opacity: 0; overflow: hidden; mso-hide: all; visibility: hidden; width: 0;">'.$message.'</span>
-				<div class="container">
-                 '.$message.'<br/>
-                    Regards<br/>
-                  '.$fromEmail.'
-				</div>
-			</body>
-			</html>';
-    $result = @mail($to, $subject, $message, $headers);
-
-    echo '<script>alert("Email sent successfully !")</script>';
-    echo '<script>window.location.href="index.php";</script>';
-}
+           <!-- starting php code -->
+           <?php
+                //first we leave this input field blank
+                $recipient = "";
+                //if user click the send button
+                if(isset($_POST['send'])){
+                    //access user entered data
+                   $recipient = $_POST['email'];
+                   $subject = $_POST['subject'];
+                   $message = $_POST['message'];
+                   $sender = "From: shahiprem7890@gmail.com";
+                   //if user leave empty field among one of them
+                   if(empty($recipient) || empty($subject) || empty($message)){
+                       ?>
+                       <!-- display an alert message if one of them field is empty -->
+                        <div class="alert alert-danger text-center">
+                            <?php echo "All inputs are required!" ?>
+                        </div>
+                       <?php
+                    }else{
+                        // PHP function to send mail
+                       if(mail($recipient, $subject, $message, $sender)){
+                        ?>
+                        <!-- display a success message if once mail sent sucessfully -->
+                        <div class="alert alert-success text-center">
+                            <?php echo "Your mail successfully sent to $recipient"?>
+                        </div>
+                       <?php
+                       $recipient = "";
+                       }else{
+                        ?>
+                        <!-- display an alert message if somehow mail can't be sent -->
+                        <div class="alert alert-danger text-center">
+                            <?php echo "Failed while sending your mail!" ?>
+                        </div>
+                       <?php
+                       }
+                   }
+                }
+            ?> <!-- end of php code -->
