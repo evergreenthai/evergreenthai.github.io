@@ -15,7 +15,9 @@
     <link href="https://fonts.googleapis.com/css?family=Lato|PT+Sans:400,700" rel="stylesheet">
 
     <link rel="shortcut icon" type="image/png" href="static/flavicon.png" />
-
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:400,700" rel="stylesheet">
+    
     <title>Evergreen Thai Restaurant</title>
 </head>
 <style>
@@ -566,7 +568,22 @@
             <div class="spacer" style="height:50px;">
             </div>
         </div>
-                                                                                          
+                        
+     <div class="container">
+        <h1>Contact Me</h1>
+        <p>Feel free to contact us and we will get back to you ass sson as we can.</p>
+        <form action="mail.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email">
+            <label for="subject">Subject:</label>
+            <input type="text" name="subject" id="subject">
+            <label for="message">Message</label>
+            <textarea name="message" cols="30" rows="10"></textarea>
+            <button type="submit" name="Send"> SEND EMAIL </button>>
+        </form>
+    </div>                                            
 
         <footer class="d-flex bg-green text-light py-2 py-sm-2 py-md-3 font-weight-light">
             <div class="container">
