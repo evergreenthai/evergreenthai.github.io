@@ -15,12 +15,4 @@ if(isset($_POST['submit'])){
     header("Location: index.html?mailsend");
 
 }
-
-$mailheader = "From:".$name."<".$email.">\r\n";
-
-$recipient = "guoyicong0904@gmail.com";
-
-mail($recipient, $subject, $message, $mailheader) or die("Error!");
-
-
 ?>
