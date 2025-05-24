@@ -1165,6 +1165,18 @@ body.nav-active { overflow: hidden; }
   letter-spacing: var(--letterSpacing-3);
 }
 
+.portion-guide {
+  font-size: 2rem;          /* 或用 20px */
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 2px solid #ff4500;
+  border-radius: 10px;
+  padding: 12px 24px;
+  margin: 1.5rem auto;
+  max-width: 600px;
+}
 
 
 
