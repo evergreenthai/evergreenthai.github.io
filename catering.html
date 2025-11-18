@@ -1,124 +1,493 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <!-- Required Meta Tags -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- Primary Meta Tags -->
-  <title>Evergreen Thai Kitchen & Bar | Premium Thai Catering Services in Toronto</title>
-  <meta name="title" content="Evergreen Thai Kitchen & Bar - Premium Thai Catering in Toronto">
-  <meta name="description"
-      content="Make your next event unforgettable with Evergreen Thai Kitchen & Bar's premium catering services in Toronto. From corporate events to private gatherings, our authentic Thai cuisine is freshly prepared, beautifully presented, and tailored to your needs. Experience the best of Thai flavors delivered with exceptional service.">
+<title>Catering Services | Evergreen Thai Kitchen & Bar Toronto</title>
+<meta name="description" content="Professional Thai catering for office events, large orders, celebrations, and gatherings across Toronto. Vegetarian & custom menu options available.">
 
-  <!-- SEO Keywords -->
-  <meta name="keywords"
-      content="Evergreen Thai Kitchen & Bar Catering, Evergreen Thai Restaurant Toronto, Thai Catering Services Toronto, Premium Thai Food Catering Toronto, Authentic Thai Cuisine Catering Toronto, Corporate Event Catering Toronto, Private Event Thai Food Toronto, High-Quality Thai Catering Toronto, Delicious Thai Food Catering Toronto, Healthy Thai Food Catering Toronto, Best Thai Catering Downtown Toronto, Thai Food Event Planning Toronto, Traditional Thai Catering Services, Affordable Thai Catering Toronto, Gourmet Thai Catering Toronto, Evergreen Thai Kitchen Events, Custom Thai Menu Catering Toronto">
-
-  <!-- Favicon -->
   <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/png">
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&family=Roboto+Condensed:400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet">
 
-  <!-- Custom CSS -->
   <link rel="stylesheet" href="./assets/css/style.css">
 
-  <!-- Preload Images for Faster Performance -->
-  <link rel="preload" as="image" href="./assets/images/catering-banner.jpg">
-  <link rel="preload" as="image" href="./assets/images/event-catering-1.jpg">
-  <link rel="preload" as="image" href="./assets/images/event-catering-2.jpg">
+  <style>
+    /* Additional Styles for Redesigned Sections */
+    .catering-hero-new {
+      position: relative;
+      height: 85vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      margin-top: 0;
+    }
+
+    .catering-hero-new::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(250, 84, 36, 0.9), rgba(252, 242, 113, 0.7));
+      mix-blend-mode: multiply;
+      z-index: 1;
+    }
+
+    .catering-hero-new::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23fa5424" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,133.3C960,128,1056,96,1152,90.7C1248,85,1344,107,1392,117.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+      background-size: cover;
+      bottom: 0;
+      top: auto;
+      height: 200px;
+      z-index: 2;
+    }
+
+    .hero-bg-new {
+      position: absolute;
+      inset: 0;
+      background: url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1920') center/cover;
+      animation: slowZoom 20s ease-in-out infinite alternate;
+    }
+
+    @keyframes slowZoom {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.1); }
+    }
+
+    .hero-content-new {
+      position: relative;
+      z-index: 3;
+      text-align: center;
+      padding: 0 20px;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-content-new h1 {
+      font-size: clamp(3rem, 8vw, 7rem);
+      font-family: var(--fontFamily-forum);
+      color: var(--white);
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 20px rgba(0,0,0,0.5);
+      animation: fadeInUp 1s ease-out 0.2s backwards;
+      line-height: 1.2;
+    }
+
+    .hero-content-new p {
+      font-size: clamp(1.2rem, 2vw, 1.8rem);
+      color: var(--white);
+      max-width: 700px;
+      margin: 0 auto 40px;
+      text-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+      animation: fadeInUp 1s ease-out 0.4s backwards;
+      font-family: var(--fontFamily-dm_sans);
+    }
+
+    .hero-btn-new {
+      display: inline-block;
+      padding: 18px 50px;
+      background: var(--orange);
+      color: var(--yellow);
+      font-size: 1.1rem;
+      font-weight: var(--weight-bold);
+      text-transform: uppercase;
+      letter-spacing: var(--letterSpacing-5);
+      border: 2px solid var(--orange);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      animation: fadeInUp 1s ease-out 0.6s backwards;
+      font-family: var(--fontFamily-dm_sans);
+    }
+
+    .hero-btn-new::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: var(--yellow);
+      transform: translate(-50%, -50%);
+      transition: width 0.5s, height 0.5s;
+      z-index: -1;
+    }
+
+    .hero-btn-new:hover::before {
+      width: 400px;
+      height: 400px;
+    }
+
+    .hero-btn-new:hover {
+      color: var(--orange);
+    }
+
+    .portion-banner-new {
+      background: linear-gradient(135deg, var(--orange), #ff6b3d);
+      padding: 30px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .portion-banner-new::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 300px;
+      height: 300px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+    }
+
+    .portion-banner-new h3 {
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      font-weight: var(--weight-bold);
+      color: var(--white);
+      margin-bottom: 15px;
+      position: relative;
+      font-family: var(--fontFamily-forum);
+    }
+
+    .portion-info-new {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      position: relative;
+    }
+
+    .portion-item-new {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      padding: 15px 30px;
+      border-radius: 50px;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .portion-item-new:hover {
+      background: rgba(255, 255, 255, 0.25);
+      transform: translateY(-5px);
+    }
+
+    .portion-item-new strong {
+      font-size: 1.8rem;
+      color: var(--yellow);
+      display: block;
+      margin-bottom: 5px;
+      font-family: var(--fontFamily-forum);
+    }
+
+    .portion-item-new span {
+      font-size: 1rem;
+      color: var(--white);
+      font-family: var(--fontFamily-dm_sans);
+    }
+
+    .menu-section-new {
+      padding: 100px 20px;
+      background: var(--eerie-black-1);
+      position: relative;
+    }
+
+    .menu-section-new::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--orange), transparent);
+    }
+
+    .section-header-new {
+      text-align: center;
+      margin-bottom: 80px;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .section-subtitle-new {
+      color: var(--yellow);
+      font-size: var(--fontSize-label-2);
+      font-weight: var(--weight-bold);
+      text-transform: uppercase;
+      letter-spacing: var(--letterSpacing-2);
+      margin-bottom: 15px;
+      font-family: var(--fontFamily-dm_sans);
+    }
+
+    .section-title-new {
+      font-size: var(--fontSize-headline-1);
+      font-family: var(--fontFamily-forum);
+      color: var(--white);
+      margin-bottom: 20px;
+      line-height: var(--lineHeight-2);
+    }
+
+    .section-description-new {
+      font-size: var(--fontSize-body-2);
+      color: var(--quick-silver);
+      max-width: 700px;
+      margin: 0 auto;
+      font-family: var(--fontFamily-dm_sans);
+      line-height: var(--lineHeight-5);
+    }
+
+    .menu-grid-new {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .menu-card-new {
+      background: linear-gradient(135deg, var(--smoky-black-2), var(--eerie-black-3));
+      border-radius: 20px;
+      padding: 35px;
+      border: 1px solid rgba(250, 84, 36, 0.2);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .menu-card-new::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(250, 84, 36, 0.1), transparent);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .menu-card-new:hover::before {
+      opacity: 1;
+    }
+
+    .menu-card-new:hover {
+      transform: translateY(-10px);
+      border-color: var(--orange);
+      box-shadow: 0 20px 60px rgba(250, 84, 36, 0.3);
+    }
+
+    .menu-card-new h3 {
+      font-size: var(--fontSize-title-3);
+      color: var(--white);
+      margin-bottom: 20px;
+      font-family: var(--fontFamily-forum);
+      position: relative;
+      padding-bottom: 15px;
+      font-weight: var(--weight-regular);
+      line-height: var(--lineHeight-2);
+    }
+
+    .menu-card-new h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--orange), var(--yellow));
+      transition: width 0.3s ease;
+    }
+
+    .menu-card-new:hover h3::after {
+      width: 100px;
+    }
+
+    .price-row-new {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .price-row-new:last-child {
+      border-bottom: none;
+    }
+
+    .price-row-new:hover {
+      padding-left: 10px;
+      border-color: var(--orange);
+    }
+
+    .price-label-new {
+      font-size: var(--fontSize-body-4);
+      color: var(--quick-silver);
+      font-weight: var(--weight-regular);
+      font-family: var(--fontFamily-dm_sans);
+    }
+
+    .price-value-new {
+      font-size: var(--fontSize-title-4);
+      color: var(--orange);
+      font-weight: var(--weight-bold);
+      font-family: var(--fontFamily-forum);
+    }
+
+    .cta-section-new {
+      padding: 120px 20px;
+      background: linear-gradient(135deg, var(--smoky-black-1), var(--eerie-black-2));
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section-new::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23fa5424" fill-opacity="0.05" d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+      opacity: 0.5;
+    }
+
+    .cta-content-new {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .cta-content-new h2 {
+      font-size: var(--fontSize-headline-1);
+      font-family: var(--fontFamily-forum);
+      color: var(--white);
+      margin-bottom: 25px;
+      line-height: var(--lineHeight-2);
+    }
+
+    .cta-content-new p {
+      font-size: var(--fontSize-body-3);
+      color: var(--quick-silver);
+      margin-bottom: 50px;
+      font-family: var(--fontFamily-dm_sans);
+      line-height: var(--lineHeight-5);
+    }
+
+    .cta-buttons-new {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .fade-in-new {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .fade-in-new.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 768px) {
+      .menu-grid-new {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+      }
+
+      .portion-info-new {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .catering-hero-new {
+        height: 70vh;
+      }
+    }
+  </style>
 </head>
-
-
 
 <body id="top">
 
-  <!-- 
-    - #PRELOADER
-  -->
-
+  <!-- PRELOADER -->
   <div class="preload" data-preaload>
     <div class="circle"></div>
     <p class="text">Evergreen Thai</p>
   </div>
 
-
-
-
-
-  <!-- 
-    - #TOP BAR
-  -->
-
+  <!-- TOP BAR -->
   <div class="topbar">
     <div class="container">
-
       <a href="https://www.google.com/maps/search/?api=1&query=Evergreen+Thai+Kitchen+%26+Bar" target="_blank">
         <address class="topbar-item">
           <div class="icon">
             <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
           </div>
-      
-          <span class="span">
-            175 Dundas St W, Toronto, ON M5G 1C7
-          </span>
+          <span class="span">175 Dundas St W, Toronto, ON M5G 1C7</span>
         </address>
       </a>
       
       <div class="separator"></div>
 
-    <a href="https://www.google.com/maps/search/?api=1&query=Evergreen+Thai+Kitchen+%26+Bar" target="_blank">
-      <div class="topbar-item item-2">
-        <div class="icon">
-          <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+      <a href="https://www.google.com/maps/search/?api=1&query=Evergreen+Thai+Kitchen+%26+Bar" target="_blank">
+        <div class="topbar-item item-2">
+          <div class="icon">
+            <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+          </div>
+          <span class="span">Daily : 11am to 9pm | Sunday : 3pm - 9pm</span>
         </div>
-        <span class="span">Daily : 11am to 9pm | Sunday : 3pm - 9pm</span>
-      </div>
-    </a>
+      </a>
 
       <a href="tel:+14165818668" class="topbar-item link">
         <div class="icon">
           <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
         </div>
-
         <span class="span">+1 416-581-8668</span>
       </a>
 
       <div class="separator"></div>
 
-      <a href="mailto:booking@restaurant.com" class="topbar-item link">
+      <a href="mailto:info@evergreenthai.com" class="topbar-item link">
         <div class="icon">
           <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
         </div>
-
         <span class="span">info@evergreenthai.com</span>
       </a>
-
     </div>
   </div>
 
-
-
-
-
-  <!-- 
-    - #HEADER
-  -->
-
+  <!-- HEADER -->
   <header class="header" data-header>
     <div class="container">
-
       <a href="index.html" class="logo">
         <img src="./assets/images/logo.png" width="100" height="50" alt="Evergreen Thai - Home">
       </a>
 
       <nav class="navbar" data-navbar>
-
         <button class="close-btn" aria-label="close menu" data-nav-toggler>
           <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
         </button>
@@ -128,11 +497,9 @@
         </a>
 
         <ul class="navbar-list">
-
           <li class="navbar-item">
             <a href="index.html" class="navbar-link hover-underline">
               <div class="separator"></div>
-
               <span class="span">Home</span>
             </a>
           </li>
@@ -140,7 +507,6 @@
           <li class="navbar-item">
             <a href="menus.html" class="navbar-link hover-underline">
               <div class="separator"></div>
-
               <span class="span">Menus</span>
             </a>
           </li>
@@ -148,7 +514,6 @@
           <li class="navbar-item">
             <a href="catering.html" class="navbar-link hover-underline active">
               <div class="separator"></div>
-
               <span class="span">Catering</span>
             </a>
           </li>
@@ -156,7 +521,6 @@
           <li class="navbar-item">
             <a href="https://ubereats.com/ca/store/evergreen-thai-kitchen-%26-bar/h0YfZB56QiSX4nwOzhHeSQ?srsltid=AfmBOoqlq-jE3zGfPrEf991Kbrhq-cDM0i4Fq-Ju5QRVGwYRnH67O2X7" class="navbar-link hover-underline">
               <div class="separator"></div>
-
               <span class="span">Delivery</span>
             </a>
           </li>
@@ -164,11 +528,9 @@
           <li class="navbar-item">
             <a href="contact.html" class="navbar-link hover-underline">
               <div class="separator"></div>
-
               <span class="span">Contact</span>
             </a>
           </li>
-
         </ul>
 
         <div class="text-center">
@@ -191,12 +553,11 @@
             +1 416-581-8668
           </a>
         </div>
-
       </nav>
 
       <a class="btn btn-secondary" data-glf-cuid="a7b41d88-dc47-4d7f-a36e-72c7b1128c0d" data-glf-ruid="bc44a75d-d224-489b-9cef-840bdbe1a85d">
-        <span class="text text-1"  >Order online</span>
-        <span class="text text-2" aria-hidden="true" >Order Online</span> 
+        <span class="text text-1">Order online</span>
+        <span class="text text-2" aria-hidden="true">Order Online</span> 
       </a>
 
       <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
@@ -206,454 +567,298 @@
       </button>
 
       <div class="overlay" data-nav-toggler data-overlay></div>
-
     </div>
   </header>
 
-
-
-
-
   <main>
     <article>
-
-      <!-- 
-        - #HERO
-      -->
-
-      <section class="hero text-center" aria-label="home" id="home">
-
-        <ul class="hero-slider" data-hero-slider>
-
-
-
-          <li class="slider-item active" data-hero-slider-item>
-
-            <div class="slider-bg ">
-              <img src="./assets/images/hero-slider-1.jpg" width="1880" height="950" alt="" class="img-cover">
-            </div>
-
-            <p class="label-2 section-subtitle slider-reveal">Your Event, Our Flavorful Touch</p>
-
-            <h1 class="display-1 hero-title slider-reveal">
-              Custom Catering Solutions <br>for Every Event
-            </h1>
-
-            <p class="body-2 hero-text slider-reveal">
-              Delight your guests with fresh, flavorful Thai dishes tailored to suit every occasion.
-            </p>
-
-            <a class="btn btn-primary slider-reveal" data-glf-cuid="a7b41d88-dc47-4d7f-a36e-72c7b1128c0d" data-glf-ruid="bc44a75d-d224-489b-9cef-840bdbe1a85d">
-              <span class="text text-1" >Order online</span>
-              <span class="text text-2" aria-hidden="true" >Order Online</span> 
-            </a>
-
-          </li>
-
-
-
-        </ul>
-
-
-        <a class="hero-btn has-after"  data-glf-cuid="a7b41d88-dc47-4d7f-a36e-72c7b1128c0d" data-glf-ruid="bc44a75d-d224-489b-9cef-840bdbe1a85d" data-glf-reservation="true">
-          <img src="./assets/images/hero-icon.png" width="48" height="48" alt="booking icon">
-
-          <span class="label-2 text-center span">Book A Table</span>
-        </a>
-
+      <!-- Hero Section -->
+      <section class="catering-hero-new">
+        <div class="hero-bg-new"></div>
+        <div class="hero-content-new">
+          <h1>Catering Excellence</h1>
+          <p>Transform your events with authentic Thai flavors crafted to perfection</p>
+          <button class="hero-btn-new">View Menu</button>
+        </div>
       </section>
 
-
-      <!-- 
-        - #MENU (Catering)
-      -->
-
-      <section class="section menu" aria-label="menu-label" id="menu-catering">
-        <div class="container">
-
-          <p class="section-subtitle text-center label-2">Perfect for Every Occasion</p>
-          <h2 class="headline-1 section-title text-center">Catering Menu</h2>
-          <p class="text-center label-1">
-            Explore our catering options, perfect for small gatherings and large events. Enjoy authentic Thai cuisine tailored to your needs.
-          </p>
-
-          <ul class="grid-list">
-
-          <h3 class="portion-guide">
-            Portion Guide:<br><strong>(S)</strong> Small (serves 5–6 people)<br> <strong>(L)</strong> Large (serves 10–12 people)
-          </h3>
-
-
-
-            <!-- Veggie Spring Roll -->
-            <li>
-              <div class="menu-card hover:card">
-                <div class="title-wrapper">
-                  <h3 class="title-3">Veggie Spring Roll</h3>
-                  <span class="span title-2">Small: $50 (25 pcs)</span>
-                  <span class="span title-2">Large: $100 (50 pcs)</span>
-                </div>
-              </div>
-            </li>
-
-            <!-- Mango Salad -->
-            <li>
-              <div class="menu-card hover:card">
-                <div class="title-wrapper">
-                  <h3 class="title-3">Mango Salad</h3>
-                  <span class="span title-2">Small: $50</span>
-                  <span class="span title-2">Large: $90</span>
-                </div>
-              </div>
-            </li>
-
-            <!-- Pad Thai -->
-            <li>
-              <div class="menu-card hover:card">
-                <div class="title-wrapper">
-                  <h3 class="title-3">Pad Thai</h3>
-                  <span class="span title-2">Chicken/Beef: $80 (S), $155 (L)</span>
-                  <span class="span title-2">Shrimp: $85 (S), $160 (L)</span>
-                </div>
-              </div>
-            </li>
-
-            <!-- Glass Noodle -->
-            <li>
-              <div class="menu-card hover:card">
-                <div class="title-wrapper">
-                  <h3 class="title-3">Glass Noodle</h3>
-                  <span class="span title-2">Chicken/Beef: $80 (S), $155 (L)</span>
-                  <span class="span title-2">Shrimp: $85 (S), $160 (L)</span>
-                </div>
-              </div>
-            </li>
-
-            <!-- Basil Noodle -->
-            <li>
-              <div class="menu-card hover:card">
-                <div class="title-wrapper">
-                  <h3 class="title-3">Basil Noodle</h3>
-                  <span class="span title-2">Chicken/Beef: $85 (S), $160 (L)</span>
-                  <span class="span title-2">Shrimp: $90 (S), $165 (L)</span>
-                </div>
-              </div>
-            </li>
-
-            <!-- Thai Fried Rice -->
-            <li>
-              <div class="menu-card hover:card">
-                <div class="title-wrapper">
-                  <h3 class="title-3">Thai Fried Rice</h3>
-                  <span class="span title-2">Chicken/Beef: $80 (S), $155 (L)</span>
-                  <span class="span title-2">Shrimp: $85 (S), $170 (L)</span>
-                </div>
-              </div>
-            </li>
-
-            <!-- Basil Fried Rice -->
-            <li>
-              <div class="menu-card hover:card">
-                <div class="title-wrapper">
-                  <h3 class="title-3">Basil Fried Rice</h3>
-                  <span class="span title-2">Chicken/Beef: $80 (S), $155 (L)</span>
-                  <span class="span title-2">Shrimp: $85 (S), $170 (L)</span>
-                </div>
-              </div>
-            </li>
-
-            <!-- Seafood Fried Rice -->
-            <li>
-              <div class="menu-card hover:card">
-                <div class="title-wrapper">
-                  <h3 class="title-3">Seafood Fried Rice</h3>
-                  <span class="span title-2">Small: $85</span>
-                  <span class="span title-2">Large: $170</span>
-                </div>
-              </div>
-            </li>
-
-            <!-- Japanese Fried Rice -->
-            <li>
-              <div class="menu-card hover:card">
-                <div class="title-wrapper">
-                  <h3 class="title-3">Japanese Fried Rice</h3>
-                  <span class="span title-2">Small: $85</span>
-                  <span class="span title-2">Large: $170</span>
-                </div>
-              </div>
-            </li>
-
-            <!-- Golden Fried Rice -->
-            <li>
-              <div class="menu-card hover:card">
-                <div class="title-wrapper">
-                  <h3 class="title-3">Golden Fried Rice</h3>
-                  <span class="span title-2">Small: $85</span>
-                  <span class="span title-2">Large: $170</span>
-                </div>
-              </div>
-            </li>
-
-              <!-- Green/Red/Golden Curry -->
-            <li>
-              <div class="menu-card hover:card">
-                <div class="title-wrapper">
-                  <h3 class="title-3">Green/Red/Golden Curry</h3>
-                  <span class="span title-2">Chicken/Beef/Shrimp: $90 (S), $170 (L)</span>
-                </div>
-              </div>
-            </li>
-
-            <!-- Panang Curry -->
-            <li>
-              <div class="menu-card hover:card">
-                <div class="title-wrapper">
-                  <h3 class="title-3">Panang Curry</h3>
-                  <span class="span title-2">Chicken: $95 (S), $180 (L)</span>
-                </div>
-              </div>
-            </li>
-
-            <!-- Wok Stir Fry (Basil/Cashew) -->
-            <li>
-              <div class="menu-card hover:card">
-                <div class="title-wrapper">
-                  <h3 class="title-3">Wok Stir Fry (Basil/Cashew)</h3>
-                  <span class="span title-2">Chicken/Beef/Shrimp: $85 (S), $170 (L)</span>
-                </div>
-              </div>
-            </li>
-
-            <!-- Mango Chicken/Beef -->
-            <li>
-              <div class="menu-card hover:card">
-                <div class="title-wrapper">
-                  <h3 class="title-3">Mango Chicken/Beef</h3>
-                  <span class="span title-2">$90 (S), $180 (L)</span>
-                </div>
-              </div>
-            </li>
-
-            <!-- Seafood Combination -->
-            <li>
-              <div class="menu-card hover:card">
-                <div class="title-wrapper">
-                  <h3 class="title-3">Seafood Combination</h3>
-                  <span class="span title-2">$120 (Small), $230 (Large)</span>
-                </div>
-              </div>
-            </li>
-
-
-          </ul>
-
-
-          <div class="text-center">
-            <a href="#contact" class="btn btn-primary">Contact Us for Catering</a>
+      <!-- Portion Guide Banner -->
+      <section class="portion-banner-new">
+        <h3>Serving Sizes Made Simple</h3>
+        <div class="portion-info-new">
+          <div class="portion-item-new">
+            <strong>(S)</strong>
+            <span>Serves 5-6 People</span>
           </div>
-
-        </div>
-      </section>
-
-      <!-- 
-        - #SPECIAL DISH
-      -->
-
-      <section class="special-dish text-center" aria-labelledby="dish-label">
-
-        <div class="special-dish-banner">
-          <img src="./assets/images/special-dish-banner.jpg" width="940" height="900" loading="lazy" alt="special dish"
-            class="img-cover">
-        </div>
-
-        <div class="special-dish-content bg-black-10">
-          <div class="container">
-
-            <img src="./assets/images/badge-1.png" width="28" height="41" loading="lazy" alt="badge" class="abs-img">
-
-            <p class="section-subtitle label-2">Special Dessert</p>
-
-            <h2 class="headline-1 section-title">Rainbow Fruit Delight</h2>
-
-            <p class="section-text">
-              Inspired by the traditional Minnan Four-Fruit Soup, our Rainbow Fruit Delight is a refreshing and vibrant dessert soup that perfectly balances flavor and texture.
-              Featuring a delightful mix of seasonal fruits, chewy toppings, and light syrup, this dessert offers a cool and satisfying treat for any occasion.
-            </p>
-
-            <div class="wrapper">
-              <del class="del body-3" style="text-decoration: line-through;">$14.99</del>
-
-              <span class="span body-1">$10.00</span>
-            </div>
-
-            <a class="btn btn-primary" data-glf-cuid="a7b41d88-dc47-4d7f-a36e-72c7b1128c0d" data-glf-ruid="bc44a75d-d224-489b-9cef-840bdbe1a85d">
-              <span class="text text-1" >View All Menu</span>
-
-              <span class="text text-2" aria-hidden="true">View All Menu</span>
-            </a>
-
+          <div class="portion-item-new">
+            <strong>(L)</strong>
+            <span>Serves 10-12 People</span>
           </div>
         </div>
-
-        <img src="./assets/images/shape-4.png" width="179" height="359" loading="lazy" alt="" class="shape shape-1">
-
-        <img src="./assets/images/shape-9.png" width="351" height="462" loading="lazy" alt="" class="shape shape-2">
-
       </section>
 
-      <!-- 
-        - #ABOUT
-      -->
+      <!-- Menu Section -->
+      <section class="menu-section-new">
+        <div class="section-header-new fade-in-new">
+          <p class="section-subtitle-new">Authentic Thai Cuisine</p>
+          <h1 class="headline-1 section-title">
+               Catering Services
+          </h1>
 
-      <section class="section about text-center" aria-labelledby="about-label" id="about">
-        <div class="container">
+          <p class="section-description-new">Handcrafted dishes perfect for every occasion, from intimate gatherings to grand celebrations</p>
+        </div>
 
-          <div class="about-content">
-
-            <p class="label-2 section-subtitle" id="about-label">Our Story</p>
-
-            <h2 class="headline-1 section-title">Every Fla vor Tells a Story</h2>
-
-            <p class="section-text">
-              At Evergreen Thai Restaurant, every dish is crafted with love, tradition, and a passion for authentic Thai cuisine.
-              Founded in 2007, Evergreen Thai Restaurant has been a beloved part of the Toronto community for over a decade. Known for our commitment to fresh ingredients, an MSG-free menu, and a warm, welcoming atmosphere, we take pride in delivering a dining experience that's both delicious and healthy.
-            </p>
-
-            <div class="contact-label">Book Through Call</div>
-
-            <a href="tel:+14165818668" class="body-1 contact-number hover-underline">+1 416-581-8668</a>
-
-            <a href="#" class="btn btn-primary">
-              <span class="text text-1">Read More</span>
-
-              <span class="text text-2" aria-hidden="true">Read More</span>
-            </a>
-
+        <div class="menu-grid-new">
+          <!-- Appetizers -->
+          <div class="menu-card-new fade-in-new">
+            <h3>Veggie Spring Roll</h3>
+            <div class="price-row-new">
+              <span class="price-label-new">Small (25 pcs)</span>
+              <span class="price-value-new">$50</span>
+            </div>
+            <div class="price-row-new">
+              <span class="price-label-new">Large (50 pcs)</span>
+              <span class="price-value-new">$100</span>
+            </div>
           </div>
 
-          <figure class="about-banner">
-
-            <img src="./assets/images/about-banner.jpg" width="570" height="570" loading="lazy" alt="about banner"
-              class="w-100" data-parallax-item data-parallax-speed="1">
-
-            <div class="abs-img abs-img-1 has-before" data-parallax-item data-parallax-speed="1.75">
-              <img src="./assets/images/about-abs-image.jpg" width="285" height="285" loading="lazy" alt=""
-                class="w-100">
+          <div class="menu-card-new fade-in-new">
+            <h3>Mango Salad</h3>
+            <div class="price-row-new">
+              <span class="price-label-new">Small</span>
+              <span class="price-value-new">$50</span>
             </div>
-
-            <div class="abs-img abs-img-2 has-before">
-              <img src="./assets/images/badge-2.png" width="133" height="134" loading="lazy" alt="">
+            <div class="price-row-new">
+              <span class="price-label-new">Large</span>
+              <span class="price-value-new">$90</span>
             </div>
+          </div>
 
-          </figure>
+          <!-- Noodles -->
+          <div class="menu-card-new fade-in-new">
+            <h3>Pad Thai</h3>
+            <div class="price-row-new">
+              <span class="price-label-new">Chicken/Beef (S)</span>
+              <span class="price-value-new">$80</span>
+            </div>
+            <div class="price-row-new">
+              <span class="price-label-new">Chicken/Beef (L)</span>
+              <span class="price-value-new">$155</span>
+            </div>
+            <div class="price-row-new">
+              <span class="price-label-new">Shrimp (S)</span>
+              <span class="price-value-new">$85</span>
+            </div>
+            <div class="price-row-new">
+              <span class="price-label-new">Shrimp (L)</span>
+              <span class="price-value-new">$160</span>
+            </div>
+          </div>
 
-          <img src="./assets/images/shape-3.png" width="197" height="194" loading="lazy" alt="" class="shape">
+          <div class="menu-card-new fade-in-new">
+            <h3>Glass Noodle</h3>
+            <div class="price-row-new">
+              <span class="price-label-new">Chicken/Beef (S)</span>
+              <span class="price-value-new">$80</span>
+            </div>
+            <div class="price-row-new">
+              <span class="price-label-new">Chicken/Beef (L)</span>
+              <span class="price-value-new">$155</span>
+            </div>
+            <div class="price-row-new">
+              <span class="price-label-new">Shrimp (S)</span>
+              <span class="price-value-new">$85</span>
+            </div>
+            <div class="price-row-new">
+              <span class="price-label-new">Shrimp (L)</span>
+              <span class="price-value-new">$160</span>
+            </div>
+          </div>
 
+          <div class="menu-card-new fade-in-new">
+            <h3>Basil Noodle</h3>
+            <div class="price-row-new">
+              <span class="price-label-new">Chicken/Beef (S)</span>
+              <span class="price-value-new">$85</span>
+            </div>
+            <div class="price-row-new">
+              <span class="price-label-new">Chicken/Beef (L)</span>
+              <span class="price-value-new">$160</span>
+            </div>
+            <div class="price-row-new">
+              <span class="price-label-new">Shrimp (S)</span>
+              <span class="price-value-new">$90</span>
+            </div>
+            <div class="price-row-new">
+              <span class="price-label-new">Shrimp (L)</span>
+              <span class="price-value-new">$165</span>
+            </div>
+          </div>
+
+          <!-- Fried Rice -->
+          <div class="menu-card-new fade-in-new">
+            <h3>Thai Fried Rice</h3>
+            <div class="price-row-new">
+              <span class="price-label-new">Chicken/Beef (S)</span>
+              <span class="price-value-new">$80</span>
+            </div>
+            <div class="price-row-new">
+              <span class="price-label-new">Chicken/Beef (L)</span>
+              <span class="price-value-new">$155</span>
+            </div>
+            <div class="price-row-new">
+              <span class="price-label-new">Shrimp (S)</span>
+              <span class="price-value-new">$85</span>
+            </div>
+            <div class="price-row-new">
+              <span class="price-label-new">Shrimp (L)</span>
+              <span class="price-value-new">$170</span>
+            </div>
+          </div>
+
+          <div class="menu-card-new fade-in-new">
+            <h3>Basil Fried Rice</h3>
+            <div class="price-row-new">
+              <span class="price-label-new">Chicken/Beef (S)</span>
+              <span class="price-value-new">$80</span>
+            </div>
+            <div class="price-row-new">
+              <span class="price-label-new">Chicken/Beef (L)</span>
+              <span class="price-value-new">$155</span>
+            </div>
+            <div class="price-row-new">
+              <span class="price-label-new">Shrimp (S)</span>
+              <span class="price-value-new">$85</span>
+            </div>
+            <div class="price-row-new">
+              <span class="price-label-new">Shrimp (L)</span>
+              <span class="price-value-new">$170</span>
+            </div>
+          </div>
+
+          <div class="menu-card-new fade-in-new">
+            <h3>Seafood Fried Rice</h3>
+            <div class="price-row-new">
+              <span class="price-label-new">Small</span>
+              <span class="price-value-new">$85</span>
+            </div>
+            <div class="price-row-new">
+              <span class="price-label-new">Large</span>
+              <span class="price-value-new">$170</span>
+            </div>
+          </div>
+
+          <div class="menu-card-new fade-in-new">
+            <h3>Japanese Fried Rice</h3>
+            <div class="price-row-new">
+              <span class="price-label-new">Small</span>
+              <span class="price-value-new">$85</span>
+            </div>
+            <div class="price-row-new">
+              <span class="price-label-new">Large</span>
+              <span class="price-value-new">$170</span>
+            </div>
+          </div>
+
+          <div class="menu-card-new fade-in-new">
+            <h3>Golden Fried Rice</h3>
+            <div class="price-row-new">
+              <span class="price-label-new">Small</span>
+              <span class="price-value-new">$85</span>
+            </div>
+            <div class="price-row-new">
+              <span class="price-label-new">Large</span>
+              <span class="price-value-new">$170</span>
+            </div>
+          </div>
+
+          <!-- Curries -->
+          <div class="menu-card-new fade-in-new">
+            <h3>Green/Red/Golden Curry</h3>
+            <div class="price-row-new">
+              <span class="price-label-new">Chicken/Beef/Shrimp (S)</span>
+              <span class="price-value-new">$90</span>
+            </div>
+            <div class="price-row-new">
+              <span class="price-label-new">Chicken/Beef/Shrimp (L)</span>
+              <span class="price-value-new">$170</span>
+            </div>
+          </div>
+
+          <div class="menu-card-new fade-in-new">
+            <h3>Panang Curry</h3>
+            <div class="price-row-new">
+              <span class="price-label-new">Chicken (S)</span>
+              <span class="price-value-new">$95</span>
+            </div>
+            <div class="price-row-new">
+              <span class="price-label-new">Chicken (L)</span>
+              <span class="price-value-new">$180</span>
+            </div>
+          </div>
+
+          <!-- Stir Fry & Specialties -->
+          <div class="menu-card-new fade-in-new">
+            <h3>Wok Stir Fry</h3>
+            <div class="price-row-new">
+              <span class="price-label-new">Basil/Cashew (S)</span>
+              <span class="price-value-new">$85</span>
+            </div>
+            <div class="price-row-new">
+              <span class="price-label-new">Basil/Cashew (L)</span>
+              <span class="price-value-new">$170</span>
+            </div>
+          </div>
+
+          <div class="menu-card-new fade-in-new">
+            <h3>Mango Chicken/Beef</h3>
+            <div class="price-row-new">
+              <span class="price-label-new">Small</span>
+              <span class="price-value-new">$90</span>
+            </div>
+            <div class="price-row-new">
+              <span class="price-label-new">Large</span>
+              <span class="price-value-new">$180</span>
+            </div>
+          </div>
+
+          <div class="menu-card-new fade-in-new">
+            <h3>Seafood Combination</h3>
+            <div class="price-row-new">
+              <span class="price-label-new">Small</span>
+              <span class="price-value-new">$120</span>
+            </div>
+            <div class="price-row-new">
+              <span class="price-label-new">Large</span>
+              <span class="price-value-new">$230</span>
+            </div>
+          </div>
         </div>
       </section>
 
-
-      <!-- 
-        - #EVENT
-      -->
-
-      <section class="section event bg-black-10" aria-label="event">
-        <div class="container">
-
-          <p class="section-subtitle label-2 text-center">Recent Updates</p>
-
-          <h2 class="section-title headline-1 text-center">Upcoming Event</h2>
-
-          <ul class="grid-list">
-
-            <li>
-              <div class="event-card has-before hover:shine">
-
-                <div class="card-banner img-holder" style="--width: 350; --height: 450;">
-                  <img src="./assets/images/event-1.jpg" width="350" height="450" loading="lazy"
-                    alt="Flavour so good you’ll try to eat with your eyes." class="img-cover">
-
-                  <time class="publish-date label-2" datetime="2022-09-15">15/12/2024</time>
-                </div>
-
-                <div class="card-content">
-                  <p class="card-subtitle label-2 text-center">Seasonal Signature</p>
-
-                  <h3 class="card-title title-2 text-center">
-                    Lemongrass Chicken + Thai Iced Tea – Only $19! 🍛🍹
-                  </h3>
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="event-card has-before hover:shine">
-
-                <div class="card-banner img-holder" style="--width: 350; --height: 450;">
-                  <img src="./assets/images/event-2.jpg" width="350" height="450" loading="lazy"
-                    alt="Flavour so good you’ll try to eat with your eyes." class="img-cover">
-
-                  <time class="publish-date label-2" datetime="2022-09-08">30/10/2024</time>
-                </div>
-
-                <div class="card-content">
-                  <p class="card-subtitle label-2 text-center">Seasonal Combo</p>
-
-                  <h3 class="card-title title-2 text-center">
-                    🎉Braised Pork Rice Combo + Thai Iced Tea – Only $16! 
-                  </h3>
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="event-card has-before hover:shine">
-
-                <div class="card-banner img-holder" style="--width: 350; --height: 450;">
-                  <img src="./assets/images/event-3.jpg" width="350" height="450" loading="lazy"
-                    alt="Flavour so good you’ll try to eat with your eyes." class="img-cover">
-
-                  <time class="publish-date label-2" datetime="2022-09-03">01/09/2024</time>
-                </div>
-
-                <div class="card-content">
-                  <p class="card-subtitle label-2 text-center">Google Review</p>
-
-                  <h3 class="card-title title-2 text-center">
-                    Leave a Google Review & Enjoy a Free Thai Iced Tea! 🍹✨
-                  </h3>
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
-          <a href="#" class="btn btn-primary">
-            <span class="text text-1">View Our Blog</span>
-
-            <span class="text text-2" aria-hidden="true">View Our Blog</span>
-          </a>
-
+      <!-- CTA Section -->
+      <section class="cta-section-new">
+        <div class="cta-content-new fade-in-new">
+          <h2>Ready to Make Your Event Unforgettable?</h2>
+          <p>Contact us today to discuss your catering needs and create a custom menu for your special occasion</p>
+          <div class="cta-buttons-new">
+            <a href="contact.html" class="btn btn-primary">
+              <span class="text text-1">Contact Us Now</span>
+              <span class="text text-2" aria-hidden="true">Contact Us Now</span>
+            </a>
+            <a href="tel:+14165818668" class="btn btn-secondary">
+              <span class="text text-1">Call: +1 416-581-8668</span>
+              <span class="text text-2" aria-hidden="true">Call: +1 416-581-8668</span>
+            </a>
+          </div>
         </div>
       </section>
 
     </article>
   </main>
 
-
-
-
-
-  <!-- 
-    - #FOOTER
-  -->
-
-  <footer class="footer section has-bg-image text-center"
-    style="background-image: url('./assets/images/footer-bg.jpg')">
+  <!-- FOOTER -->
+  <footer class="footer section has-bg-image text-center" style="background-image: url('./assets/images/footer-bg.jpg')">
     <div class="container">
 
       <div class="footer-top grid-list">
@@ -664,20 +869,21 @@
             <img src="./assets/images/logo.png" width="160" height="50" loading="lazy" alt="Evergreen Thai home">
           </a>
 
-        <a href="https://www.google.com/maps/search/?api=1&query=Evergreen+Thai+Kitchen+%26+Bar" target="_blank">
-          <address class="body-4">
-            175 Dundas St W, Toronto, ON M5G 1C7
-          </address>
-        </a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Evergreen+Thai+Kitchen+%26+Bar" target="_blank">
+            <address class="body-4">
+              175 Dundas St W, Toronto, ON M5G 1C7
+            </address>
+          </a>
+
           <a href="mailto:info@evergreenthai.com" class="body-4 contact-link">info@evergreenthai.com</a>
 
-          <a href="tel:++14165818668" class="body-4 contact-link">Booking Request : +1 416-581-8668</a>
+          <a href="tel:+14165818668" class="body-4 contact-link">Booking Request : +1 416-581-8668</a>
 
-        <a href="https://www.google.com/maps/search/?api=1&query=Evergreen+Thai+Kitchen+%26+Bar" target="_blank">
-          <p class="body-4">
-            Open : 11:00 am - 9:00 pm
-          </p>
-        </a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Evergreen+Thai+Kitchen+%26+Bar" target="_blank">
+            <p class="body-4">
+              Open : 11:00 am - 9:00 pm
+            </p>
+          </a>
         
           <div class="wrapper">
             <div class="separator"></div>
@@ -700,7 +906,6 @@
 
             <button type="submit" class="btn btn-secondary">
               <span class="text text-1">Subscribe</span>
-
               <span class="text text-2" aria-hidden="true">Subscribe</span>
             </button>
           </form>
@@ -746,8 +951,7 @@
           </li>
 
           <li>
-            <a href="https://www.ubereats.com/ca/store/evergreen-thai-kitchen-%26-bar/h0YfZB56QiSX4nwOzhHeSQ?srsltid=AfmBOoo-nZC8oKCyVn8VjxLEkIpZXEt0RpLIvYvQWaNNwZqvWQcPsWXB" 
-            class="label-2 footer-link hover-underline">Uber Eats</a>
+            <a href="https://www.ubereats.com/ca/store/evergreen-thai-kitchen-%26-bar/h0YfZB56QiSX4nwOzhHeSQ?srsltid=AfmBOoo-nZC8oKCyVn8VjxLEkIpZXEt0RpLIvYvQWaNNwZqvWQcPsWXB" class="label-2 footer-link hover-underline">Uber Eats</a>
           </li>
 
           <li>
@@ -761,8 +965,7 @@
       <div class="footer-bottom">
 
         <p class="copyright">
-          &copy; 2025 Evergreen Thai Kithen & Bar. All Rights Reserved | Powered by <a href="https://www.plansale.ca"
-            target="_blank" class="link">PLANSALE</a>
+          &copy; 2025 Evergreen Thai Kithen & Bar. All Rights Reserved | Powered by <a href="https://www.plansale.ca" target="_blank" class="link">PLANSALE</a>
         </p>
 
       </div>
@@ -770,33 +973,45 @@
     </div>
   </footer>
 
-
-
-
-
-  <!-- 
-    - #BACK TO TOP
-  -->
-
+  <!-- BACK TO TOP -->
   <a href="#top" class="back-top-btn active" aria-label="back to top" data-back-top-btn>
     <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
   </a>
 
-
-
-
-
-  <!-- 
-    - custom js link
-  -->
+  <!-- Custom JS -->
   <script src="./assets/js/script.js"></script>
 
-  <!-- 
-    - ionicon link
-  -->
+  <!-- Additional JS for New Sections -->
+  <script>
+    // Scroll Animation
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-in-new').forEach(el => observer.observe(el));
+
+    // Smooth scroll for hero button
+    const heroBtn = document.querySelector('.hero-btn-new');
+    if (heroBtn) {
+      heroBtn.addEventListener('click', () => {
+        document.querySelector('.menu-section-new').scrollIntoView({ behavior: 'smooth' });
+      });
+    }
+  </script>
+
+  <!-- Ionicon Link -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async ></script>
+  <script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async></script>
 </body>
 
 </html>
