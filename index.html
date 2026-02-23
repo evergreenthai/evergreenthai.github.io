@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
   <!-- Required Meta Tags -->
   <meta charset="UTF-8" />
@@ -50,41 +53,128 @@
 
   <!-- Structured Data (Entity signals for SEO / GEO / AI search) -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Restaurant",
-    "@id": "https://evergreenthai.com/#restaurant",
-    "name": "Evergreen Thai Kitchen & Bar",
-    "url": "https://evergreenthai.com/",
-    "image": [
-      "https://evergreenthai.com/assets/images/about-banner.jpg"
-    ],
-    "telephone": "+1-416-581-8668",
-    "priceRange": "$$",
-    "servesCuisine": ["Thai"],
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "175 Dundas St W",
-      "addressLocality": "Toronto",
-      "addressRegion": "ON",
-      "postalCode": "M5G 1Z8",
-      "addressCountry": "CA"
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "@id": "https://evergreenthai.com/#restaurant",
+  "name": "Evergreen Thai Kitchen & Bar",
+  "url": "https://evergreenthai.com/",
+  "image": [
+    "https://evergreenthai.com/assets/images/about-banner.jpg"
+  ],
+  "telephone": "+1-416-581-8668",
+  "priceRange": "$$",
+  "servesCuisine": [
+    "Thai"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "175 Dundas St W",
+    "addressLocality": "Toronto",
+    "addressRegion": "ON",
+    "postalCode": "M5G 1C7",
+    "addressCountry": "CA"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "11:00",
+      "closes": "21:00"
     },
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-        "opens": "11:00",
-        "closes": "21:00"
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Sunday"
+      ],
+      "opens": "15:00",
+      "closes": "21:00"
+    }
+  ],
+  "acceptsReservations": true,
+  "sameAs": [
+    "https://www.facebook.com/Evergreen.Thai.Restaurant",
+    "https://www.instagram.com/evergreen.thai",
+    "https://www.ubereats.com/ca/store/evergreen-thai-kitchen-%26-bar/h0YfZB56QiSX4nwOzhHeSQ",
+    "https://www.doordash.com/en-CA/store/evergreen-thai-toronto-52384/2339924/",
+    "https://order.fantuan.ca/store/Restaurant/ca-3052"
+  ],
+  "hasMenu": "https://evergreenthai.com/menus.html"
+}
+</script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Where is Evergreen Thai Kitchen & Bar located?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We’re located at 175 Dundas St W, Toronto, ON M5G 1C7 (downtown Toronto)."
       }
-    ],
-    "acceptsReservations": true,
-    "sameAs": [
-      "https://www.facebook.com/Evergreen.Thai.Restaurant",
-      "https://www.instagram.com/evergreen.thai"
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "Question",
+      "name": "What are your hours?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mon–Sat: 11am–9pm. Sunday: 3pm–9pm. Hours may vary on holidays—please call +1 (416) 581-8668."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you take reservations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Book a table online or call +1 (416) 581-8668."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer delivery and takeout?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes—dine-in, takeout, and delivery are available. You can order online or through delivery partners like Uber Eats, DoorDash, and Fantuan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you deliver to nearby condos and apartments in downtown Toronto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Delivery is popular with nearby condo and apartment residents in downtown Toronto. For large group orders (10+), see our catering / large orders option for direct delivery within 5km."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer corporate catering and large group orders?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Corporate catering and large group orders (10+ people) are available, with direct delivery within a 5km radius of 175 Dundas St W. Free delivery is available for 10+ people within the 5km radius—please call or email to arrange."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you have vegetarian options?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Evergreen Thai offers vegetarian options. For a fully vegetarian menu, our sister restaurant next door at 173 Dundas St W—Vegedelight Vegetarian Restaurant—specializes in Chinese vegetarian cuisine, including Sichuan-style selections."
+      }
+    }
+  ]
+}
+</script>
+
 
   <style>
   .map-section {
@@ -259,7 +349,192 @@
       margin-top: 30px;
     }
   }
-  </style>
+  
+
+/* ===================================
+   FAQ SECTION
+   =================================== */
+
+.faq {
+  background-color: var(--smoky-black-1);
+  padding: 100px 0;
+}
+
+.faq .section-subtitle {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.faq .section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: var(--eerie-black-1);
+  border: 1px solid rgba(197, 157, 95, 0.3);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+
+.faq-item.active {
+  border-color: var(--gold-crayola);
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 25px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+  background-color: rgba(197, 157, 95, 0.1);
+}
+
+.faq-question .title-3 {
+  color: var(--white);
+  margin: 0;
+  padding-right: 20px;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.faq-icon {
+  font-size: 2.5rem;
+  color: var(--gold-crayola);
+  font-weight: 300;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.faq-answer > div {
+  padding: 0 30px 25px 30px;
+}
+
+.faq-answer p {
+  color: var(--quick-silver);
+  line-height: 1.8;
+  margin: 0 0 14px 0;
+  }
+
+
+.faq-p { margin: 0 0 14px 0; }
+.faq-note { margin: 10px 0 0 0; color: var(--quick-silver); line-height: 1.8; }
+
+.faq-inline-link {
+  color: var(--gold-crayola);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.faq-link-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 6px 0 14px 0;
+}
+
+.faq-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(197, 157, 95, 0.35);
+  background: rgba(197, 157, 95, 0.08);
+  color: var(--white);
+  text-decoration: none;
+  transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.faq-chip:hover {
+  transform: translateY(-1px);
+  border-color: var(--gold-crayola);
+  background: rgba(197, 157, 95, 0.14);
+}
+
+/* FAQ CTA */
+.faq-cta {
+  text-align: center;
+  margin-top: 60px;
+  padding-top: 60px;
+  border-top: 1px solid rgba(197, 157, 95, 0.2);
+  align-items: center;
+}
+.faq-cta .btn {
+  display: inline-block;
+  margin: 0 auto;
+}
+.faq-cta .body-1 {
+  color: var(--quick-silver);
+  margin-bottom: 25px;
+}
+
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+
+@media (max-width: 768px) {
+  .catering-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .catering-cta {
+    padding: 40px 25px;
+  }
+  
+  .catering-cta .cta-buttons {
+    flex-direction: column;
+  }
+  
+  .catering-cta .btn {
+    width: 100%;
+  }
+  
+  .popular-catering {
+    padding: 40px 25px;
+  }
+  
+  .faq-question {
+    padding: 20px 20px;
+  }
+  
+  .faq-question .title-3 {
+    font-size: 1.6rem;
+  }
+  
+  .faq-answer > div {
+    padding: 0 20px 20px 20px;
+  }
+}
+
+</style>
 
 </head>
 
@@ -320,7 +595,7 @@
 
       <div class="separator"></div>
 
-      <a href="mailto:booking@restaurant.com" class="topbar-item link">
+      <a href="mailto:info@evergreenthai.com" class="topbar-item link">
         <div class="icon">
           <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
         </div>
@@ -460,7 +735,7 @@
               <img src="./assets/images/hero-slider-1.jpg" width="1880" height="950" alt="" class="img-cover">
             </div>
 
-            <p class="label-2 section-subtitle slider-reveal">Tradational & Hygine</p>
+            <p class="label-2 section-subtitle slider-reveal">Downtown • Kitchen & Bar • Great Value</p>
 
             <h1 class="display-1 hero-title slider-reveal">
               Evergreen Thai <br>
@@ -556,11 +831,12 @@
 
             <p class="label-2 section-subtitle" id="about-label">Our Story</p>
 
-            <h2 class="headline-1 section-title">Every Fla vor Tells a Story</h2>
+            <h2 class="headline-1 section-title">Every Flavor Tells a Story</h2>
 
             <p class="section-text">
-              At Evergreen Thai Restaurant, every dish is crafted with love, tradition, and a passion for authentic Thai cuisine.
-              Founded in 2007, Evergreen Thai Restaurant has been a beloved part of the Toronto community for over a decade. Known for our commitment to fresh ingredients, an MSG-free menu, and a warm, welcoming atmosphere, we take pride in delivering a dining experience that's both delicious and healthy.
+              At Evergreen Thai Kitchen &amp; Bar, we bring Thai-inspired comfort food to downtown Toronto with a chill, local vibe.
+              Founded in 2007 as Evergreen Thai Restaurant, we’ve been serving the community for years with fresh ingredients,
+              an MSG-free menu, and great value — perfect for dine-in, takeout, and delivery.
             </p>
 
             <div class="contact-label">Book Through Call</div>
@@ -724,7 +1000,7 @@
             <div class="wrapper">
               <del class="del body-3" style="text-decoration: line-through;">$14.99</del>
 
-              <span class="span body-1">$10.00</span>
+              <span class="span body-1">$7.00</span>
             </div>
 
             <a class="btn btn-primary" data-glf-cuid="a7b41d88-dc47-4d7f-a36e-72c7b1128c0d" data-glf-ruid="bc44a75d-d224-489b-9cef-840bdbe1a85d">
@@ -779,7 +1055,7 @@
           <div class="map-header">
             <p class="section-subtitle">Find Us</p>
             <h2 class="headline-1">Visit Our Restaurant</h2>
-            <p class="body-2">Located in the heart of downtown Toronto, we're easy to find and ready to serve you authentic Thai cuisine.</p>
+            <p class="body-2">Located in the heart of downtown Toronto, we’re easy to find — stop by for a chill Kitchen &amp; Bar vibe, or order takeout and delivery anytime.</p>
           </div>
 
           <div class="map-wrapper">
@@ -884,7 +1160,7 @@
 
                 <h3 class="title-2 card-title">Skilled Chefs</h3>
 
-                <p class="label-1 card-text">Our experienced chefs bring authentic Thai flavors to life, crafting every dish with precision, passion, and expertise.</p>
+                <p class="label-1 card-text">Our experienced chefs craft Thai-inspired comfort dishes with consistency, freshness, and care — perfect for dine-in, takeout, and group orders.</p>
 
               </div>
             </li>
@@ -916,6 +1192,167 @@
 
 
 
+
+
+
+      <!-- 
+        - #FAQ
+      -->
+      <section class="section faq" aria-labelledby="faq-title">
+        <div class="container">
+
+          <p class="section-subtitle label-2">Quick Answers</p>
+
+          <h2 class="headline-1 section-title" id="faq-title">
+            Frequently Asked Questions
+          </h2>
+
+          <div class="faq-container">
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false" type="button">
+                <h3 class="title-3">Where are you located?</h3>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <div>
+                  <p>We’re located at 175 Dundas St W, Toronto, ON (downtown Toronto).</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false" type="button">
+                <h3 class="title-3">What are your hours?</h3>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <div>
+                  <p>We’re open daily. Hours may vary on holidays. For the latest hours, call +1 (416) 581-8668.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false" type="button">
+                <h3 class="title-3">Do you take reservations?</h3>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <div>
+                  <p>Yes. You can book a table online or call +1 (416) 581-8668.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false" type="button">
+                <h3 class="title-3">Do you offer delivery & takeout?</h3>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <div>
+                  
+<p class="faq-p">
+  Yes — dine-in, takeout, and delivery are available. You can order directly, or through our delivery partners:
+</p>
+
+<div class="faq-link-row">
+  <a class="faq-chip" href="https://www.ubereats.com/ca/store/evergreen-thai-kitchen-%26-bar/h0YfZB56QiSX4nwOzhHeSQ?srsltid=AfmBOorsLOwX27xFk6XEXLtIW-6X3hh42Dv-be0vQGAMX0_zL5zAfr6k" target="_blank" rel="noopener noreferrer">Uber Eats</a>
+  <a class="faq-chip" href="https://www.doordash.com/en-CA/store/evergreen-thai-toronto-52384/2339924/?srsltid=AfmBOor2_4X6sYuMGaq5jepbxkoNXfVJ7T7eVDKO-Jhbpf1GJbyZIy8Z" target="_blank" rel="noopener noreferrer">DoorDash</a>
+  <a class="faq-chip" href="https://order.fantuan.ca/store/Restaurant/ca-3052?rTraceId=s-1-0-2026035126911189007" target="_blank" rel="noopener noreferrer">Fantuan</a>
+</div>
+
+<p class="faq-note">
+  Planning a team meal or group order? Open the
+  <a class="faq-inline-link" href="#faq-catering">corporate catering / large orders</a>
+  question below for direct delivery details (10+ people within 5km).
+</p>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item" id="faq-catering">
+              <button class="faq-question" aria-expanded="false" type="button">
+                <h3 class="title-3">Do you offer corporate catering / large orders?</h3>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <div>
+                  
+<p class="faq-p">
+  Yes. We offer corporate catering and large group orders (<strong>10+ people</strong>) for office lunches, business meetings,
+  weekend overtime team meals, and company gatherings in downtown Toronto.
+</p>
+
+<p class="faq-p">
+  <strong>Direct delivery is available within a 5km radius</strong> of 175 Dundas St W. For <strong>10+ people within 5km</strong>,
+  we offer <strong>free delivery</strong>. Please contact us to confirm timing and details.
+</p>
+
+<div class="faq-link-row">
+  <a class="faq-chip" href="tel:+14165818668">Call: +1 416-581-8668</a>
+  <a class="faq-chip" href="mailto:info@evergreenthai.com">Email: info@evergreenthai.com</a>
+  <a class="faq-chip" href="catering.html">View Catering Menu</a>
+</div>
+
+<p class="faq-note">
+  Nearby: government offices around Dundas St W, downtown businesses, universities, and high-density condo/apartment communities.
+</p>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false" type="button">
+                <h3 class="title-3">Do you have vegetarian options?</h3>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <div>
+                  <p class="faq-p">
+                    Yes — Evergreen Thai Kitchen & Bar has vegetarian options available on our menu.
+                  </p>
+
+                  <p class="faq-p">
+                    Looking for a fully plant-based meal? Our sister restaurant next door at
+                    <strong>173 Dundas St W</strong>,
+                    <a class="faq-inline-link" href="https://www.vegedelight-toronto.ca/" target="_blank" rel="noopener noreferrer">
+                      Vegedelight Vegetarian Restaurant
+                    </a>,
+                    focuses on Chinese vegetarian cuisine — including standout Sichuan-style plant-based dishes.
+                  </p>
+
+                  <div class="faq-link-row">
+                    <a class="faq-chip" href="https://www.vegedelight-toronto.ca/" target="_blank" rel="noopener noreferrer">
+                      Vegedelight Website
+                    </a>
+                    <a class="faq-chip" href="https://www.vegedelight-toronto.ca/menu" target="_blank" rel="noopener noreferrer">
+                      Vegedelight Menu
+                    </a>
+                  </div>
+
+                  <p class="faq-note">
+                    Same ownership, two menus — choose Thai vegetarian options at Evergreen, or go fully plant-based next door at Vegedelight.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="faq-cta">
+            <p class="body-1">Still have questions?</p>
+            <a href="contact.html" class="btn btn-primary">
+              <span class="text text-1">Contact Us</span>
+              <span class="text text-2" aria-hidden="true">Contact Us</span>
+            </a>
+          </div>
+
+        </div>
+      </section>
 
 
       <!-- 
@@ -1035,7 +1472,7 @@
         </a>
           <a href="mailto:info@evergreenthai.com" class="body-4 contact-link">info@evergreenthai.com</a>
 
-          <a href="tel:++14165818668" class="body-4 contact-link">Booking Request : +1 416-581-8668</a>
+          <a href="tel:+14165818668" class="body-4 contact-link">Booking Request : +1 416-581-8668</a>
 
         <a href="https://www.google.com/maps/search/?api=1&query=Evergreen+Thai+Kitchen+%26+Bar" target="_blank">
           <p class="body-4">
@@ -1125,7 +1562,7 @@
       <div class="footer-bottom">
 
         <p class="copyright">
-          &copy; 2025 Evergreen Thai Kithen & Bar. All Rights Reserved | Powered by <a href="https://www.plansale.ca"
+          &copy; 2025 Evergreen Thai Kitchen & Bar. All Rights Reserved | Powered by <a href="https://www.plansale.ca"
             target="_blank" class="link">PLANSALE</a>
         </p>
 
@@ -1164,6 +1601,48 @@
 
 
 
+
+
+  <script>
+// FAQ Accordion Functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const faqItems = document.querySelectorAll('.faq-item');
+  
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
+    const icon = item.querySelector('.faq-icon');
+    
+    question.addEventListener('click', () => {
+      const isOpen = question.getAttribute('aria-expanded') === 'true';
+      
+      // Close all other FAQs
+      faqItems.forEach(otherItem => {
+        if (otherItem !== item) {
+          otherItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+          otherItem.querySelector('.faq-answer').style.maxHeight = null;
+          otherItem.querySelector('.faq-icon').textContent = '+';
+          otherItem.classList.remove('active');
+        }
+      });
+      
+      // Toggle current FAQ
+      if (isOpen) {
+        question.setAttribute('aria-expanded', 'false');
+        answer.style.maxHeight = null;
+        icon.textContent = '+';
+        item.classList.remove('active');
+      } else {
+        question.setAttribute('aria-expanded', 'true');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+        icon.textContent = '−';
+        item.classList.add('active');
+      }
+    });
+  });
+});
+
+  </script>
 
 </body>
 
