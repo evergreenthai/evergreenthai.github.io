@@ -9,7 +9,7 @@
   <title>Menu | Evergreen Thai Kitchen & Bar | Downtown Toronto</title>
   <meta name="description" content="Explore the Evergreen Thai Kitchen & Bar menu in downtown Toronto — Thai-inspired comfort food, curries, noodles, appetizers, vegetarian options, and drinks. Great value, chill vibe. Dine-in, takeout, and delivery." />
 
-  <link rel="canonical" href="https://evergreenthai.com/menu.html" />
+  <link rel="canonical" href="https://evergreenthai.com/menus.html" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
 
   <!-- Open Graph -->
@@ -73,7 +73,7 @@
           "streetAddress": "175 Dundas St W",
           "addressLocality": "Toronto",
           "addressRegion": "ON",
-          "postalCode": "M5G 1Z8",
+          "postalCode": "M5G 1C7",
           "addressCountry": "CA"
         },
         "openingHoursSpecification": [
@@ -273,7 +273,148 @@
         font-size: 12px;
       }
     }
-  </style>
+  
+
+/* ===================================
+   FAQ SECTION (Menus)
+   =================================== */
+.faq {
+  background-color: var(--smoky-black-1);
+  padding: 100px 0;
+}
+
+.faq .section-subtitle { text-align: center; margin-bottom: 15px; }
+.faq .section-title { text-align: center; margin-bottom: 60px; }
+
+.faq-container { max-width: 900px; margin: 0 auto; }
+
+.faq-item {
+  background: var(--eerie-black-1);
+  border: 1px solid rgba(197, 157, 95, 0.3);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+
+.faq-item.active { border-color: var(--gold-crayola); }
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 25px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.3s ease;
+}
+
+.faq-question:hover { background-color: rgba(197, 157, 95, 0.1); }
+
+.faq-question .title-3 {
+  color: var(--white);
+  margin: 0;
+  padding-right: 20px;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.faq-icon {
+  font-size: 2.5rem;
+  color: var(--gold-crayola);
+  font-weight: 300;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.faq-item.active .faq-icon { transform: rotate(45deg); }
+
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+.faq-answer > div { padding: 0 30px 25px 30px; }
+
+.faq-answer p { color: var(--quick-silver); line-height: 1.8; margin: 0; }
+.faq-answer p + p { margin-top: 12px; }
+
+.faq-inline-link { color: var(--gold-crayola); }
+.faq-inline-link:hover { text-decoration: underline; }
+
+.faq-link-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.faq-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--white-alpha-10);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--white);
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.5px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.faq-chip:hover {
+  transform: translateY(-2px);
+  border-color: var(--gold-crayola);
+}
+
+.faq-note { margin-top: 14px; opacity: 0.95; }
+
+.faq-cta {
+  text-align: center;
+  margin-top: 60px;
+  padding-top: 60px;
+  border-top: 1px solid rgba(197, 157, 95, 0.2);
+}
+
+.faq-cta .body-1 { color: var(--quick-silver); margin-bottom: 25px; }
+
+@media (max-width: 768px) {
+  .faq-question { padding: 20px 20px; }
+  .faq-question .title-3 { font-size: 1.6rem; }
+  .faq-answer > div { padding: 0 20px 20px 20px; }
+}
+
+</style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Where is Evergreen Thai Kitchen & Bar located?",
+        "acceptedAnswer": { "@type": "Answer", "text": "175 Dundas St W, Toronto, ON M5G 1C7 (downtown Toronto)." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer delivery and takeout?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes — dine-in, takeout, and delivery are available. For individual and small-group delivery, you can order via Uber Eats, DoorDash, or Fantuan. For corporate catering and large orders (10+), contact us directly for delivery within 5km." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you have vegetarian options?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes — vegetarian options are available at Evergreen. For fully plant-based meals, our sister restaurant next door at 173 Dundas St W (Vegedelight Vegetarian Restaurant) focuses on Chinese vegetarian cuisine." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there a minimum order?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No minimum for pickup. For group delivery within 5km, free delivery is available for 10+ people or orders of $200+ CAD. For smaller delivery orders, please use delivery partners." }
+      }
+    ]
+  }
+  </script>
+
 </head>
 
 <body id="top">
@@ -1450,6 +1591,111 @@
   </main>
 
   <!-- FOOTER -->
+
+      <!-- 
+        - #FAQ
+      -->
+      <section class="section faq" aria-labelledby="faq-title">
+        <div class="container">
+
+          <p class="section-subtitle label-2">Quick Answers</p>
+
+          <h2 class="headline-1 section-title" id="faq-title">
+            Frequently Asked Questions
+          </h2>
+
+          <div class="faq-container">
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false" type="button">
+                <h3 class="title-3">Where are you located?</h3>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <div>
+                  <p>We’re located at <strong>175 Dundas St W, Toronto, ON M5G 1C7</strong> (downtown Toronto).</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false" type="button">
+                <h3 class="title-3">Do you offer delivery &amp; takeout?</h3>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <div>
+                  <p>Yes — dine-in, takeout, and delivery are available. For individual and small-group delivery, you can order online or use our delivery partners:</p>
+                  <div class="faq-link-row">
+                    <a class="faq-chip" href="https://www.ubereats.com/ca/store/evergreen-thai-kitchen-%26-bar/h0YfZB56QiSX4nwOzhHeSQ" target="_blank" rel="noopener noreferrer">Uber Eats</a>
+                    <a class="faq-chip" href="https://www.doordash.com/en-CA/store/evergreen-thai-toronto-52384/2339924/" target="_blank" rel="noopener noreferrer">DoorDash</a>
+                    <a class="faq-chip" href="https://order.fantuan.ca/store/Restaurant/ca-3052" target="_blank" rel="noopener noreferrer">Fantuan</a>
+                  </div>
+                  <p style="margin-top: 12px;">For corporate catering / large orders (10+ people), please contact us directly for delivery within 5km of our downtown location.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false" type="button">
+                <h3 class="title-3">Do you have vegetarian options?</h3>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <div>
+                  <p class="faq-p">Yes — Evergreen Thai Kitchen &amp; Bar has vegetarian options available on our menu.</p>
+                  <p class="faq-p">
+                    Looking for a fully plant-based meal? Our sister restaurant next door at <strong>173 Dundas St W</strong>,
+                    <a class="faq-inline-link" href="https://www.vegedelight-toronto.ca/" target="_blank" rel="noopener noreferrer">Vegedelight Vegetarian Restaurant</a>,
+                    focuses on Chinese vegetarian cuisine — including standout Sichuan-style plant-based dishes.
+                  </p>
+
+                  <div class="faq-link-row">
+                    <a class="faq-chip" href="https://www.vegedelight-toronto.ca/" target="_blank" rel="noopener noreferrer">Vegedelight Website</a>
+                    <a class="faq-chip" href="https://www.vegedelight-toronto.ca/menu" target="_blank" rel="noopener noreferrer">Vegedelight Menu</a>
+                  </div>
+
+                  <p class="faq-note">Same ownership, two menus — choose Thai vegetarian options at Evergreen, or go fully plant-based next door at Vegedelight.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false" type="button">
+                <h3 class="title-3">Is there a minimum order?</h3>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <div>
+                  <p>No minimum for pickup.</p>
+                  <p>For group delivery, we offer <strong>free delivery</strong> within a 5km radius for orders that meet either of the following:</p>
+                  <ul style="margin: 10px 0 0 18px; color: var(--quick-silver); line-height: 1.8;">
+                    <li><strong>10+ people</strong>, or</li>
+                    <li><strong>$200+ CAD</strong> order value</li>
+                  </ul>
+                  <p style="margin-top: 12px;">For smaller delivery orders, please use our delivery partners listed above.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false" type="button">
+                <h3 class="title-3">Do you offer catering?</h3>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <div>
+                  <p>Yes — we provide corporate catering and large group orders in downtown Toronto. Please visit our <a class="faq-inline-link" href="catering.html">Catering</a> or call <a class="faq-inline-link" href="tel:+14165818668">+1 (416) 581-8668</a>  email <a class="faq-inline-link" href="mailto:info@evergreenthai.com">info@evergreenthai.com</a>.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
   <footer class="footer section has-bg-image text-center" style="background-image: url('./assets/images/footer-bg.jpg')">
     <div class="container">
       <div class="footer-top grid-list">
@@ -1578,5 +1824,53 @@
       });
     });
   </script>
+
+  <script>
+  // FAQ Accordion Functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    if (!faqItems.length) return;
+
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      const answer = item.querySelector('.faq-answer');
+      const icon = item.querySelector('.faq-icon');
+
+      if (!question || !answer || !icon) return;
+
+      question.addEventListener('click', () => {
+        const isOpen = question.getAttribute('aria-expanded') === 'true';
+
+        // Close all other FAQs
+        faqItems.forEach(otherItem => {
+          if (otherItem !== item) {
+            const q = otherItem.querySelector('.faq-question');
+            const a = otherItem.querySelector('.faq-answer');
+            const i = otherItem.querySelector('.faq-icon');
+            if (!q || !a || !i) return;
+            q.setAttribute('aria-expanded', 'false');
+            a.style.maxHeight = null;
+            i.textContent = '+';
+            otherItem.classList.remove('active');
+          }
+        });
+
+        // Toggle current FAQ
+        if (isOpen) {
+          question.setAttribute('aria-expanded', 'false');
+          answer.style.maxHeight = null;
+          icon.textContent = '+';
+          item.classList.remove('active');
+        } else {
+          question.setAttribute('aria-expanded', 'true');
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+          icon.textContent = '−';
+          item.classList.add('active');
+        }
+      });
+    });
+  });
+  </script>
+
 </body>
 
