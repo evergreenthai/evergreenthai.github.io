@@ -1,67 +1,90 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
   <!-- Required Meta Tags -->
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- Primary Meta Tags -->
-<title>Evergreen Thai Kitchen & Bar | Toronto's Authentic Thai Cuisine</title>
-<meta name="description" content="Enjoy authentic Thai cuisine in downtown Toronto. From Pad Thai to signature curries, Evergreen Thai Kitchen & Bar offers fresh ingredients and unforgettable dining.">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- SEO Keywords -->
-  <meta name="keywords"
-      content="Evergreen Thai Kitchen & Bar Toronto, Evergreen Thai Restaurant Toronto, Healthy Thai food downtown Toronto, Fresh Thai cuisine Toronto, Delicious Thai food Toronto, High-quality Thai Restaurant Toronto, Affordable Thai Restaurant Toronto, Best Thai food downtown Toronto, Authentic Thai cuisine Toronto, Freshly prepared Thai food Toronto, High-value Thai dining Toronto, Thai Bar and Kitchen Toronto, Modern Thai Dining Toronto, Upscale Thai Restaurant Toronto, Traditional Thai cuisine Toronto, Premium Thai Restaurant Toronto, Fine Dining Thai Food Toronto, Best Thai Kitchen Experience Toronto, Evergreen Thai Kitchen Downtown Toronto">
+  <!-- Primary Meta Tags -->
+  <title>Evergreen Thai Kitchen & Bar | Thai Food & Cocktails in Downtown Toronto</title>
+  <meta name="description" content="Evergreen Thai Kitchen & Bar in downtown Toronto offers Thai-inspired comfort food, signature curries, noodles, and cocktails — a chill local vibe with great value. Dine-in, takeout, and delivery available." />
+
+  <!-- Canonical + Robots -->
+  <link rel="canonical" href="https://evergreenthai.com/" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+
+  <!-- Open Graph (Facebook / AI previews) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Evergreen Thai Kitchen & Bar" />
+  <meta property="og:title" content="Evergreen Thai Kitchen & Bar | Thai Food & Cocktails in Downtown Toronto" />
+  <meta property="og:description" content="Thai-inspired comfort food, curries, noodles, and cocktails — chill local vibe, great value. Downtown Toronto. Dine-in, takeout, delivery." />
+  <meta property="og:url" content="https://evergreenthai.com/" />
+  <meta property="og:locale" content="en_CA" />
+  <meta property="og:image" content="https://evergreenthai.com/assets/images/about-banner.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Evergreen Thai Kitchen & Bar | Thai Food & Cocktails in Downtown Toronto" />
+  <meta name="twitter:description" content="Thai-inspired comfort food, curries, noodles, and cocktails — chill local vibe, great value. Downtown Toronto." />
+  <meta name="twitter:image" content="https://evergreenthai.com/assets/images/about-banner.jpg" />
+
+  <!-- (Optional) Keywords: keep light -->
+  <meta name="keywords" content="Evergreen Thai Kitchen & Bar, Thai restaurant downtown Toronto, Thai food Toronto, Thai cocktails Toronto, Dundas St W restaurant, takeout delivery Toronto" />
 
   <!-- Favicon -->
-  <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/png">
+  <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/png" />
 
   <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&family=Roboto+Condensed:400,700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&family=Roboto+Condensed:400,700&display=swap" rel="stylesheet" />
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/style.css" />
 
-  <!-- Preload Images for Faster Performance -->
-  <link rel="preload" as="image" href="./assets/images/hero-slider-1.jpg">
-  <link rel="preload" as="image" href="./assets/images/hero-slider-2.jpg">
-  <link rel="preload" as="image" href="./assets/images/hero-slider-3.jpg">
+  <!-- Preload Images -->
+  <link rel="preload" as="image" href="./assets/images/hero-slider-1.jpg" />
+  <link rel="preload" as="image" href="./assets/images/hero-slider-2.jpg" />
+  <link rel="preload" as="image" href="./assets/images/hero-slider-3.jpg" />
 
+  <!-- Structured Data (Entity signals for SEO / GEO / AI search) -->
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Restaurant",
-  "name": "Evergreen Thai Kitchen & Bar",
-  "image": "https://evergreenthai.com/logo.png",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "175 Dundas St W",
-    "addressLocality": "Toronto",
-    "addressRegion": "ON",
-    "postalCode": "M5G 1Z8",
-    "addressCountry": "CA"
-  },
-  "telephone": "+1-416-581-8668",
-  "servesCuisine": "Thai",
-  "url": "https://evergreenthai.com",
-  "priceRange": "$$",
-  "openingHours": "Mo-Su 11:00-21:00"
-}
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "@id": "https://evergreenthai.com/#restaurant",
+    "name": "Evergreen Thai Kitchen & Bar",
+    "url": "https://evergreenthai.com/",
+    "image": [
+      "https://evergreenthai.com/assets/images/about-banner.jpg"
+    ],
+    "telephone": "+1-416-581-8668",
+    "priceRange": "$$",
+    "servesCuisine": ["Thai"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "175 Dundas St W",
+      "addressLocality": "Toronto",
+      "addressRegion": "ON",
+      "postalCode": "M5G 1Z8",
+      "addressCountry": "CA"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "11:00",
+        "closes": "21:00"
+      }
+    ],
+    "acceptsReservations": true,
+    "sameAs": [
+      "https://www.facebook.com/Evergreen.Thai.Restaurant",
+      "https://www.instagram.com/evergreen.thai"
+    ]
+  }
   </script>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-B4J2YZ3Z75"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-B4J2YZ3Z75');
-</script>
-
 
   <style>
   .map-section {
