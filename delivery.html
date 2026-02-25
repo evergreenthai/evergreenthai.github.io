@@ -148,796 +148,441 @@
       }
     </script>
 
-    <style>
+<style>
+  /* =========================================================
+     DELIVERY HERO
+     ========================================================= */
 
-    /* Menu Category Navigation */
-    .menu-nav {
-      background: var(--eerie-black-1);
-      padding: 20px 0;
-      position: sticky;
-      top: 96px;
-      z-index: 3;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  .catering-hero-new {
+    position: relative;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 0;
+    padding-top: 250px;
+    padding-bottom: 110px;
+  }
+
+
+  .catering-hero-new::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(250, 84, 36, 0.9), rgba(252, 242, 113, 0.7));
+    mix-blend-mode: multiply;
+    z-index: 1;
+  }
+
+  .catering-hero-new::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'><path fill='%23fa5424' fill-opacity='0.1' d='M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,133.3C960,128,1056,96,1152,90.7C1248,85,1344,107,1392,117.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'></path></svg>");
+    background-size: cover;
+    bottom: 0;
+    top: auto;
+    height: 200px;
+    z-index: 2;
+  }
+
+  /* Layout inside hero */
+  .catering-hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .catering-hero-left {
+    position: relative;
+    z-index: 5;
+    max-width: 640px;
+  }
+
+  .catering-hero-left .hero-title {
+    margin: 10px 0 18px;
+  }
+
+  .catering-hero-left .hero-text {
+    margin-bottom: 14px;
+  }
+
+  .catering-hero-left .catering-cta-row {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 22px;
+  }
+
+  .catering-hero-right {
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    padding: 36px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    position: relative;
+    z-index: 5;
+  }
+
+  .catering-hero-right h2 {
+    margin-bottom: 18px;
+  }
+
+  .catering-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .catering-list li {
+    margin-bottom: 12px;
+    line-height: 1.5;
+  }
+
+  .catering-hero-actions {
+    margin-top: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  @media (max-width: 1024px) {
+    .catering-hero-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
     }
 
-    .menu-nav-list {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 15px;
-      list-style: none;
-      padding: 0;
-      margin: 0;
+    .catering-hero-right {
+      margin-top: 20px;
+    }
+  }
+
+  /* =========================================================
+     DELIVERY: Partner chips
+     ========================================================= */
+
+  .faq-link-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .faq-chip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;
+    border: 1px solid var(--gold-crayola);
+    border-radius: 999px;
+    color: var(--gold-crayola);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    transition: all 0.25s ease;
+    background: rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+  }
+
+  .faq-chip:hover {
+    transform: translateY(-1px);
+    background: rgba(0, 0, 0, 0.45);
+  }
+
+  /* =========================================================
+     DELIVERY: Group / Corporate Catering (two-column cards)
+     ========================================================= */
+
+  .delivery-split {
+    display: grid;
+    grid-template-columns: 1.25fr 0.85fr;
+    gap: 26px;
+    margin-top: 36px;
+  }
+
+  .delivery-card {
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    padding: 28px;
+    box-shadow: 0 0 0 1px rgba(255, 140, 0, 0.12), 0 12px 40px rgba(0, 0, 0, 0.35);
+  }
+
+  .delivery-card-title {
+    font-family: var(--fontFamily-forum);
+    font-size: 2.6rem;
+    line-height: 1.15;
+    margin: 0 0 14px;
+    color: var(--white);
+  }
+
+  .delivery-meta {
+    color: var(--quick-silver);
+    margin: 0 0 14px;
+    font-size: 1.45rem;
+    line-height: 1.75;
+  }
+
+  .delivery-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
+  }
+
+  .delivery-chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 9px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(0, 0, 0, 0.35);
+    color: var(--white);
+    font-size: 1.25rem;
+    letter-spacing: 0.2px;
+  }
+
+  .delivery-list {
+    list-style: none;
+    padding: 0;
+    margin: 14px 0 22px;
+  }
+
+  .delivery-list li {
+    position: relative;
+    padding-left: 20px;
+    margin: 12px 0;
+    color: var(--quick-silver);
+    font-size: 1.45rem;
+    line-height: 1.7;
+  }
+
+  .delivery-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.75em;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--orange);
+    box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.16);
+  }
+
+  .delivery-ctas {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 8px;
+  }
+
+  .delivery-small {
+    margin-top: 16px;
+    font-size: 1.2rem;
+    color: var(--quick-silver);
+    line-height: 1.65;
+  }
+
+  @media (max-width: 992px) {
+    .delivery-split {
+      grid-template-columns: 1fr;
     }
 
-    .menu-nav-link {
-      padding: 10px 20px;
-      border-radius: 25px;
-      background: var(--smoky-black-2);
-      color: var(--gold-crayola);
-      font-size: 14px;
-      font-weight: 500;
-      transition: all 0.3s ease;
-      border: 1px solid transparent;
+    .delivery-card {
+      padding: 22px;
     }
 
-    .menu-nav-link:hover,
-    .menu-nav-link.active {
-      background: var(--gold-crayola);
-      color: var(--eerie-black-1);
-      transform: translateY(-2px);
+    .delivery-card-title {
+      font-size: 2.3rem;
+    }
+  }
+
+  /* =========================================================
+     DELIVERY FAQ (accordion) — keep ONE version only
+     ========================================================= */
+
+  .faq-container {
+    max-width: 980px;
+    margin: 40px auto 0;
+    text-align: left;
+  }
+
+  .faq-item {
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+    overflow: hidden;
+    margin-bottom: 14px;
+    background: rgba(0, 0, 0, 0.28);
+    backdrop-filter: blur(10px);
+  }
+
+  .faq-question {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 18px 20px;
+    cursor: pointer;
+    background: transparent;
+    color: var(--white);
+    border: none;
+    text-align: left;
+  }
+
+  .faq-question .title-3 {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.35;
+  }
+
+  .faq-icon {
+    width: 32px;
+    height: 32px;
+    display: grid;
+    place-items: center;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    color: var(--gold-crayola);
+    font-size: 18px;
+    flex: 0 0 auto;
+    transition: transform 0.25s ease;
+  }
+
+  .faq-item.active .faq-icon {
+    transform: rotate(45deg);
+  }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+  }
+
+  .faq-answer > div {
+    padding: 0 20px 18px 20px;
+    color: var(--quick-silver);
+    line-height: 1.7;
+  }
+
+  .faq-answer a {
+    color: var(--gold-crayola);
+    text-decoration: underline;
+  }
+
+  .faq-cta {
+    margin-top: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .faq-question {
+      padding: 16px 16px;
     }
 
-    /* Enhanced Menu Cards */
-    .menu-card {
-      transition: all 0.4s ease;
-      border-radius: 16px;
-      overflow: hidden;
+    .faq-answer > div {
+      padding: 0 16px 16px 16px;
+    }
+  }
+
+  /* =========================================================
+     Page-specific fix: center single-column "about" sections
+     ========================================================= */
+
+  .about.text-center .container {
+    grid-template-columns: 1fr !important;
+    justify-items: center;
+  }
+
+  .about.text-center .about-content {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center;
+  }
+
+  /* =========================================================
+     ✅ MOBILE MENU (single clean version; desktop untouched)
+     ========================================================= */
+  @media (max-width: 1280px) {
+    .header[data-header] {
+      z-index: 10 !important;
     }
 
-    .menu-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 15px 40px rgba(197, 158, 93, 0.2);
+    .overlay[data-overlay] {
+      position: fixed !important;
+      inset: 0 !important;
+      width: 100% !important;
+      height: 100dvh !important;
+      background: rgba(0, 0, 0, 0.55) !important;
+      opacity: 0 !important;
+      visibility: hidden !important;
+      transition: opacity 0.25s ease, visibility 0.25s ease !important;
+      z-index: 20 !important;
+      pointer-events: none !important;
     }
 
-    .card-banner {
-      overflow: hidden;
-      border-radius: 50%;
-      border: 3px solid var(--gold-crayola);
+    .overlay[data-overlay].active {
+      opacity: 1 !important;
+      visibility: visible !important;
+      pointer-events: auto !important;
     }
 
-    .card-banner img {
-      transition: transform 0.5s ease;
+    .navbar[data-navbar] {
+      z-index: 30 !important;
+      background: rgba(18, 18, 18, 0.92) !important;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
     }
 
-    .menu-card:hover .card-banner img {
-      transform: scale(1.1) rotate(5deg);
+    .navbar[data-navbar] .navbar-link .span,
+    .navbar[data-navbar] .navbar-title,
+    .navbar[data-navbar] .navbar-text,
+    .navbar[data-navbar] address,
+    .navbar[data-navbar] .sidebar-link {
+      color: rgba(255, 255, 255, 0.92) !important;
     }
 
-    .badge {
-      display: inline-block;
-      padding: 4px 12px;
-      border-radius: 12px;
-      font-size: 11px;
-      margin: 5px 5px 5px 0;
-      background: var(--smoky-black-3);
-      color: var(--gold-crayola);
-      border: 1px solid var(--gold-crayola);
+    .navbar[data-navbar] .navbar-link {
+      opacity: 1 !important;
     }
 
-    /* Section Headers Enhancement */
-    .section-header {
-      margin-bottom: 60px;
-      position: relative;
+    .navbar[data-navbar] .navbar-link.active .span {
+      color: var(--gold-crayola) !important;
     }
+  }
 
-    .section-header::after {
-      content: '';
-      position: absolute;
-      bottom: -20px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100px;
-      height: 3px;
-      background: linear-gradient(90deg, transparent, var(--gold-crayola), transparent);
-    }
+  /* ===============================
+   FIX: When menu is open, make sidebar solid + clickable
+   =============================== */
 
-    /* Price Styling */
-    .title-2 {
-      color: var(--gold-crayola);
-      font-weight: 700;
-      font-size: 18px;
-    }
+  /* 让打开菜单时背景更暗，主次更明显 */
+  .overlay[data-overlay].active {
+    opacity: 0.78 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+  }
 
-    /* Dietary Icons */
-    .dietary-icons {
-      display: flex;
-      gap: 8px;
-      margin-top: 10px;
-    }
+  /* 侧边栏面板：加深背景，避免透出下面文字 */
+  .navbar[data-navbar] {
+    background: rgba(10, 10, 10, 0.98) !important;
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.06), 0 20px 60px rgba(0,0,0,0.6) !important;
+  }
 
-    .dietary-icon {
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 12px;
-      background: var(--smoky-black-3);
-      border: 1px solid var(--gold-crayola);
-    }
+  /* 打开菜单时：禁止页面滚动（避免内容“穿透”） */
+  body.nav-active {
+    overflow: hidden !important;
+  }
 
-    /* Smooth Scroll */
-    html {
-      scroll-behavior: smooth;
-    }
 
-    /* Menu Section Spacing */
-    .menu {
-      padding: 80px 0;
-    }
 
-    /* Special Offer Badge */
-    .special-badge {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background: var(--gold-crayola);
-      color: var(--eerie-black-1);
-      padding: 5px 15px;
-      border-radius: 20px;
-      font-size: 12px;
-      font-weight: 700;
-      z-index: 1;
-    }
-
-    @media (max-width: 768px) {
-      .menu-nav {
-        top: 70px;
-      }
-      
-      .menu-nav-list {
-        gap: 10px;
-      }
-      
-      .menu-nav-link {
-        padding: 8px 15px;
-        font-size: 12px;
-      }
-    }
-  
-
-/* ===================================
-   FAQ SECTION (Menus)
-   =================================== */
-.faq {
-  background-color: var(--smoky-black-1);
-  padding: 100px 0;
-}
-
-.faq .section-subtitle { text-align: center; margin-bottom: 15px; }
-.faq .section-title { text-align: center; margin-bottom: 60px; }
-
-.faq-container { max-width: 900px; margin: 0 auto; }
-
-.faq-item {
-  background: var(--eerie-black-1);
-  border: 1px solid rgba(197, 157, 95, 0.3);
-  border-radius: 10px;
-  margin-bottom: 20px;
-  overflow: hidden;
-  transition: border-color 0.3s ease;
-}
-
-.faq-item.active { border-color: var(--gold-crayola); }
-
-.faq-question {
-  width: 100%;
-  background: none;
-  border: none;
-  padding: 25px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-  text-align: left;
-  transition: background-color 0.3s ease;
-}
-
-.faq-question:hover { background-color: rgba(197, 157, 95, 0.1); }
-
-.faq-question .title-3 {
-  color: var(--white);
-  margin: 0;
-  padding-right: 20px;
-  font-size: 1.8rem;
-  font-weight: 600;
-}
-
-.faq-icon {
-  font-size: 2.5rem;
-  color: var(--gold-crayola);
-  font-weight: 300;
-  transition: transform 0.3s ease;
-  flex-shrink: 0;
-}
-
-.faq-item.active .faq-icon { transform: rotate(45deg); }
-
-.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
-.faq-answer > div { padding: 0 30px 25px 30px; }
-
-.faq-answer p { color: var(--quick-silver); line-height: 1.8; margin: 0; }
-.faq-answer p + p { margin-top: 12px; }
-
-.faq-inline-link { color: var(--gold-crayola); }
-.faq-inline-link:hover { text-decoration: underline; }
-
-.faq-link-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 14px;
-}
-
-.faq-chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 14px;
-  border-radius: 999px;
-  border: 1px solid var(--white-alpha-10);
-  background: rgba(255, 255, 255, 0.03);
-  color: var(--white);
-  font-weight: var(--weight-bold);
-  letter-spacing: 0.5px;
-  transition: transform 0.2s ease, border-color 0.2s ease;
-}
-
-.faq-chip:hover {
-  transform: translateY(-2px);
-  border-color: var(--gold-crayola);
-}
-
-.faq-note { margin-top: 14px; opacity: 0.95; }
-
-.faq-cta {
-  text-align: center;
-  margin-top: 60px;
-  padding-top: 60px;
-  border-top: 1px solid rgba(197, 157, 95, 0.2);
-}
-
-.faq-cta .body-1 { color: var(--quick-silver); margin-bottom: 25px; }
-
-@media (max-width: 768px) {
-  .faq-question { padding: 20px 20px; }
-  .faq-question .title-3 { font-size: 1.6rem; }
-  .faq-answer > div { padding: 0 20px 20px 20px; }
-}
-
-
-      /* =========================================================
-         HERO + NEW SECTIONS
-         ========================================================= */
-
-      .catering-hero-new {
-        position: relative;
-        min-height: 85vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        margin-top: 0;
-        padding-top: 250px;
-        padding-bottom: 110px;
-      }
-
-      @media (max-width: 1024px) {
-        .catering-hero-new {
-          min-height: 80vh;
-          padding-top: 250px;
-          padding-bottom: 95px;
-        }
-      }
-
-      @media (max-width: 768px) {
-        .catering-hero-new {
-          min-height: auto;
-          padding-top: 200px;
-          padding-bottom: 80px;
-        }
-      }
-
-      .catering-hero-new::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(135deg, rgba(250, 84, 36, 0.9), rgba(252, 242, 113, 0.7));
-        mix-blend-mode: multiply;
-        z-index: 1;
-      }
-
-      .catering-hero-new::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'><path fill='%23fa5424' fill-opacity='0.1' d='M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,133.3C960,128,1056,96,1152,90.7C1248,85,1344,107,1392,117.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'></path></svg>");
-        background-size: cover;
-        bottom: 0;
-        top: auto;
-        height: 200px;
-        z-index: 2;
-      }
-
-      .hero-bg-new {
-        position: absolute;
-        inset: 0;
-        background: url("https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1920") center/cover;
-        animation: slowZoom 20s ease-in-out infinite alternate;
-      }
-
-      @keyframes slowZoom {
-        0% {
-          transform: scale(1);
-        }
-        100% {
-          transform: scale(1.1);
-        }
-      }
-
-      .hero-content-new {
-        position: relative;
-        z-index: 3;
-        text-align: center;
-        padding: 0 20px;
-        animation: fadeInUp 1s ease-out;
-      }
-
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(40px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      .hero-content-new h1 {
-        font-size: clamp(3rem, 8vw, 7rem);
-        font-family: var(--fontFamily-forum);
-        color: var(--white);
-        margin-bottom: 20px;
-        text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);
-        animation: fadeInUp 1s ease-out 0.2s backwards;
-        line-height: 1.2;
-      }
-
-      .hero-content-new p {
-        font-size: clamp(1.2rem, 2vw, 1.8rem);
-        color: var(--white);
-        max-width: 700px;
-        margin: 0 auto 40px;
-        text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
-        animation: fadeInUp 1s ease-out 0.4s backwards;
-        font-family: var(--fontFamily-dm_sans);
-      }
-
-      .hero-btn-new {
-        display: inline-block;
-        padding: 18px 50px;
-        background: var(--orange);
-        color: var(--yellow);
-        font-size: 1.1rem;
-        font-weight: var(--weight-bold);
-        text-transform: uppercase;
-        letter-spacing: var(--letterSpacing-5);
-        border: 2px solid var(--orange);
-        cursor: pointer;
-        transition: all 0.3s ease;
-        position: relative;
-        overflow: hidden;
-        z-index: 1;
-        animation: fadeInUp 1s ease-out 0.6s backwards;
-        font-family: var(--fontFamily-dm_sans);
-      }
-
-      .hero-btn-new::before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 0;
-        height: 0;
-        border-radius: 50%;
-        background: var(--yellow);
-        transform: translate(-50%, -50%);
-        transition: width 0.5s, height 0.5s;
-        z-index: -1;
-      }
-
-      .hero-btn-new:hover::before {
-        width: 400px;
-        height: 400px;
-      }
-
-      .hero-btn-new:hover {
-        color: var(--orange);
-      }
-
-      /* =========================================================
-         DELIVERY: FAQ chips + accordion (scoped to .faq)
-         ========================================================= */
-      .faq-link-row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-        align-items: center;
-      }
-
-      .faq-chip {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 10px 16px;
-        border: 1px solid var(--gold-crayola);
-        border-radius: 999px;
-        color: var(--gold-crayola);
-        font-weight: 600;
-        letter-spacing: 0.02em;
-        transition: all 0.25s ease;
-        background: rgba(0, 0, 0, 0.25);
-        text-decoration: none;
-      }
-
-      .faq-chip:hover {
-        transform: translateY(-1px);
-        background: rgba(0, 0, 0, 0.45);
-      }
-
-      .faq-container {
-        max-width: 980px;
-        margin: 40px auto 0;
-        text-align: left;
-      }
-
-      .faq-item {
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        border-radius: 18px;
-        overflow: hidden;
-        margin-bottom: 14px;
-        background: rgba(0, 0, 0, 0.28);
-        backdrop-filter: blur(10px);
-      }
-
-      .faq-question {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 18px;
-        padding: 18px 20px;
-        cursor: pointer;
-        background: transparent;
-        color: var(--white);
-        border: none;
-        text-align: left;
-      }
-
-      .faq-question .title-3 {
-        margin: 0;
-        font-size: 18px;
-        line-height: 1.35;
-      }
-
-      .faq-icon {
-        width: 32px;
-        height: 32px;
-        display: grid;
-        place-items: center;
-        border-radius: 999px;
-        border: 1px solid rgba(255, 255, 255, 0.16);
-        color: var(--gold-crayola);
-        font-size: 18px;
-        flex: 0 0 auto;
-        transition: transform 0.25s ease;
-      }
-
-      .faq-item.active .faq-icon {
-        transform: rotate(45deg);
-      }
-
-      .faq-answer {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.35s ease;
-      }
-
-      .faq-answer > div {
-        padding: 0 20px 18px 20px;
-        color: var(--quick-silver);
-        line-height: 1.7;
-      }
-
-      .faq-answer a {
-        color: var(--gold-crayola);
-        text-decoration: underline;
-      }
-
-      .faq-cta {
-        margin-top: 34px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 18px;
-        flex-wrap: wrap;
-        text-align: center;
-      }
-
-      @media (max-width: 768px) {
-        .faq-question {
-          padding: 16px 16px;
-        }
-
-        .faq-answer > div {
-          padding: 0 16px 16px 16px;
-        }
-      }
-
-      /* =========================================================
-         DELIVERY: Group / Corporate Catering (two-column cards)
-         ========================================================= */
-      .delivery-split {
-        display: grid;
-        grid-template-columns: 1.25fr 0.85fr;
-        gap: 26px;
-        margin-top: 36px;
-      }
-
-      .delivery-card {
-        background: rgba(0, 0, 0, 0.35);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 24px;
-        padding: 28px;
-        box-shadow: 0 0 0 1px rgba(255, 140, 0, 0.12), 0 12px 40px rgba(0, 0, 0, 0.35);
-      }
-
-      .delivery-card-title {
-        font-family: var(--fontFamily-forum);
-        font-size: 2.6rem;
-        line-height: 1.15;
-        margin: 0 0 14px;
-        color: var(--white);
-      }
-
-      .delivery-meta {
-        color: var(--quick-silver);
-        margin: 0 0 14px;
-        font-size: 1.45rem;
-        line-height: 1.75;
-      }
-
-      .delivery-chips {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-top: 16px;
-      }
-
-      .delivery-chip {
-        display: inline-flex;
-        align-items: center;
-        padding: 9px 14px;
-        border-radius: 999px;
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        background: rgba(0, 0, 0, 0.35);
-        color: var(--white);
-        font-size: 1.25rem;
-        letter-spacing: 0.2px;
-      }
-
-      .delivery-list {
-        list-style: none;
-        padding: 0;
-        margin: 14px 0 22px;
-      }
-
-      .delivery-list li {
-        position: relative;
-        padding-left: 20px;
-        margin: 12px 0;
-        color: var(--quick-silver);
-        font-size: 1.45rem;
-        line-height: 1.7;
-      }
-
-      .delivery-list li::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0.75em;
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background: var(--orange);
-        box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.16);
-      }
-
-      .delivery-ctas {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        margin-top: 8px;
-      }
-
-      .delivery-small {
-        margin-top: 16px;
-        font-size: 1.2rem;
-        color: var(--quick-silver);
-        line-height: 1.65;
-      }
-
-      @media (max-width: 992px) {
-        .delivery-split {
-          grid-template-columns: 1fr;
-        }
-
-        .delivery-card {
-          padding: 22px;
-        }
-
-        .delivery-card-title {
-          font-size: 2.3rem;
-        }
-      }
-
-      /* =========================================================
-         Page-specific fix: center single-column "about" sections
-         ========================================================= */
-      .about.text-center .container {
-        grid-template-columns: 1fr !important;
-        justify-items: center;
-      }
-
-      .about.text-center .about-content {
-        margin-left: auto !important;
-        margin-right: auto !important;
-        text-align: center;
-      }
-
-      /* ===============================
-         Delivery Hero Layout
-         =============================== */
-      .catering-hero-grid {
-        display: grid;
-        grid-template-columns: 1.2fr 0.8fr;
-        gap: 60px;
-        align-items: center;
-      }
-
-      .catering-hero-left {
-        position: relative;
-        z-index: 5;
-        max-width: 640px;
-      }
-
-      .catering-hero-left .hero-title {
-        margin: 10px 0 18px;
-      }
-
-      .catering-hero-left .hero-text {
-        margin-bottom: 14px;
-      }
-
-      .catering-hero-left .catering-cta-row {
-        display: flex;
-        gap: 14px;
-        flex-wrap: wrap;
-        margin-top: 22px;
-      }
-
-      .catering-hero-right {
-        background: rgba(0, 0, 0, 0.55);
-        backdrop-filter: blur(6px);
-        -webkit-backdrop-filter: blur(6px);
-        padding: 36px;
-        border-radius: 12px;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        position: relative;
-        z-index: 5;
-      }
-
-      .catering-hero-right h2 {
-        margin-bottom: 18px;
-      }
-
-      .catering-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-
-      .catering-list li {
-        margin-bottom: 12px;
-        line-height: 1.5;
-      }
-
-      .catering-hero-actions {
-        margin-top: 22px;
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-      }
-
-      @media (max-width: 1024px) {
-        .catering-hero-grid {
-          grid-template-columns: 1fr;
-          gap: 40px;
-        }
-
-        .catering-hero-right {
-          margin-top: 20px;
-        }
-      }
-
-      /* =========================================================
-         ✅ MOBILE MENU (single clean version; desktop untouched)
-         ========================================================= */
-      @media (max-width: 1024px) {
-        /* Keep header normal */
-        .header[data-header] {
-          z-index: 10 !important;
-        }
-
-        /* Overlay not too dark */
-        .overlay[data-overlay] {
-          position: fixed !important;
-          inset: 0 !important;
-          width: 100% !important;
-          height: 100dvh !important;
-          background: rgba(0, 0, 0, 0.55) !important; /* ✅ lighter */
-          opacity: 0 !important;
-          visibility: hidden !important;
-          transition: opacity 0.25s ease, visibility 0.25s ease !important;
-          z-index: 20 !important;
-          pointer-events: none !important;
-        }
-
-        .overlay[data-overlay].active {
-          opacity: 1 !important;
-          visibility: visible !important;
-          pointer-events: auto !important;
-        }
-
-        /* Mobile menu panel background ONLY on mobile */
-        .navbar[data-navbar] {
-          z-index: 30 !important;
-          background: rgba(18, 18, 18, 0.92) !important;
-          backdrop-filter: blur(8px);
-          -webkit-backdrop-filter: blur(8px);
-        }
-
-        /* Brighter text inside mobile menu */
-        .navbar[data-navbar] .navbar-link .span,
-        .navbar[data-navbar] .navbar-title,
-        .navbar[data-navbar] .navbar-text,
-        .navbar[data-navbar] address,
-        .navbar[data-navbar] .sidebar-link {
-          color: rgba(255, 255, 255, 0.92) !important;
-        }
-
-        .navbar[data-navbar] .navbar-link {
-          opacity: 1 !important;
-        }
-
-        .navbar[data-navbar] .navbar-link.active .span {
-          color: var(--gold-crayola) !important;
-        }
-      }
-    </style>
+</style>
   </head>
 
   <body id="top">
