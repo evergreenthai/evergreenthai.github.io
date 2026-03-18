@@ -717,6 +717,246 @@
   .cfaq-answer > div { padding: 0 18px 18px 18px; }
 }
 
+
+
+/* Quote Form Section */
+.quote-section-new {
+  padding: 110px 20px;
+  background: linear-gradient(135deg, var(--smoky-black-1), var(--eerie-black-2));
+  position: relative;
+}
+
+.quote-grid-new {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.quote-banner-new,
+.quote-form-wrap-new {
+  background: linear-gradient(135deg, var(--smoky-black-2), var(--eerie-black-3));
+  border: 1px solid rgba(250, 84, 36, 0.18);
+  border-radius: 24px;
+  padding: 34px;
+  position: relative;
+  overflow: hidden;
+}
+
+.quote-banner-new::before,
+.quote-form-wrap-new::before {
+  content: '';
+  position: absolute;
+  inset: auto -60px -60px auto;
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle, rgba(250, 84, 36, 0.16), transparent 60%);
+  pointer-events: none;
+}
+
+.quote-kicker-new {
+  color: var(--yellow);
+  font-size: var(--fontSize-label-2);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--letterSpacing-2);
+  margin-bottom: 12px;
+  font-family: var(--fontFamily-dm_sans);
+}
+
+.quote-title-new {
+  color: var(--white);
+  font-family: var(--fontFamily-forum);
+  font-size: clamp(2.1rem, 4vw, 3.6rem);
+  line-height: 1.15;
+  margin-bottom: 18px;
+}
+
+.quote-text-new {
+  color: var(--quick-silver);
+  font-family: var(--fontFamily-dm_sans);
+  font-size: var(--fontSize-body-3);
+  line-height: var(--lineHeight-5);
+  margin-bottom: 14px;
+}
+
+.quote-points-new {
+  list-style: none;
+  padding: 0;
+  margin: 22px 0 26px;
+}
+
+.quote-points-new li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  color: var(--quick-silver);
+  font-family: var(--fontFamily-dm_sans);
+  padding: 10px 0;
+  border-bottom: 1px dashed rgba(255,255,255,0.10);
+}
+
+.quote-points-new li:last-child { border-bottom: none; }
+
+.quote-dot-new {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex: 0 0 auto;
+  margin-top: 7px;
+  background: linear-gradient(90deg, var(--orange), var(--yellow));
+}
+
+.quote-mini-actions-new {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.quote-form-title-new {
+  color: var(--white);
+  font-family: var(--fontFamily-forum);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  margin-bottom: 10px;
+}
+
+.quote-form-text-new {
+  color: var(--quick-silver);
+  font-family: var(--fontFamily-dm_sans);
+  line-height: var(--lineHeight-5);
+  margin-bottom: 24px;
+}
+
+.quote-form-new {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.quote-field-new {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.quote-field-new.full-width { grid-column: 1 / -1; }
+
+.quote-label-new {
+  color: var(--white);
+  font-family: var(--fontFamily-dm_sans);
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+
+.quote-input-new,
+.quote-select-new,
+.quote-textarea-new {
+  width: 100%;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 12px;
+  color: var(--white);
+  padding: 14px 16px;
+  font-size: 1.5rem;
+  font-family: var(--fontFamily-dm_sans);
+  outline: none;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.quote-input-new::placeholder,
+.quote-textarea-new::placeholder { color: rgba(255,255,255,0.55); }
+
+.quote-input-new:focus,
+.quote-select-new:focus,
+.quote-textarea-new:focus {
+  border-color: var(--orange);
+  box-shadow: 0 0 0 3px rgba(250,84,36,0.12);
+}
+
+.quote-select-new option {
+  color: #111;
+}
+
+.quote-textarea-new {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.quote-help-new {
+  grid-column: 1 / -1;
+  color: var(--quick-silver);
+  font-size: 1.3rem;
+  line-height: 1.7;
+  margin-top: -2px;
+  font-family: var(--fontFamily-dm_sans);
+}
+
+.quote-submit-wrap-new {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+.quote-submit-note-new {
+  color: var(--quick-silver);
+  font-size: 1.25rem;
+  font-family: var(--fontFamily-dm_sans);
+}
+
+.floating-quote-btn-new {
+  position: fixed;
+  right: 22px;
+  bottom: 88px;
+  z-index: 9998;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 18px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--orange), #ff6b3d);
+  color: var(--white);
+  box-shadow: 0 14px 40px rgba(250,84,36,0.32);
+  border: 1px solid rgba(255,255,255,0.18);
+  text-decoration: none;
+  font-family: var(--fontFamily-dm_sans);
+  font-size: 1.4rem;
+  font-weight: var(--weight-bold);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.floating-quote-btn-new:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 46px rgba(250,84,36,0.38);
+}
+
+.floating-quote-btn-new ion-icon {
+  font-size: 1.8rem;
+}
+
+@media (max-width: 992px) {
+  .quote-grid-new { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .quote-section-new { padding: 80px 16px; }
+  .quote-banner-new,
+  .quote-form-wrap-new { padding: 24px 20px; border-radius: 18px; }
+  .quote-form-new { grid-template-columns: 1fr; }
+  .floating-quote-btn-new {
+    right: 14px;
+    left: 14px;
+    bottom: 78px;
+    justify-content: center;
+  }
+}
+
 </style>
 
   <script type="application/ld+json">
@@ -952,7 +1192,7 @@
         <div class="hero-content-new">
           <h1>Catering Excellence</h1>
           <p>Transform your events with authentic Thai flavors crafted to perfection</p>
-          <button class="hero-btn-new">View Menu</button>
+          <button class="hero-btn-new" data-scroll-target="#quote-form">Get a Quote</button>
         </div>
       </section>
 
@@ -1255,7 +1495,7 @@ Vegetarian options are available. Our menu is MSG-free. Please notify us of any 
                   <span class="text text-1">Call Catering: +1 416-581-8668</span>
                   <span class="text text-2" aria-hidden="true">Call Catering: +1 416-581-8668</span>
                 </a>
-                <a href="contact.html" class="btn btn-primary">
+                <a href="#quote-form" class="btn btn-primary" data-scroll-target="#quote-form">
                   <span class="text text-1">Request a Quote</span>
                   <span class="text text-2" aria-hidden="true">Request a Quote</span>
                 </a>
@@ -1267,20 +1507,136 @@ Vegetarian options are available. Our menu is MSG-free. Please notify us of any 
 
       </section>
 
-      <!-- CTA Section -->
-      <section class="cta-section-new">
-        <div class="cta-content-new fade-in-new">
-          <h2>Ready to Make Your Event Unforgettable?</h2>
-          <p>Contact us today to discuss your catering needs and create a custom menu for your special occasion</p>
-          <div class="cta-buttons-new">
-            <a href="contact.html" class="btn btn-primary">
-              <span class="text text-1">Contact Us Now</span>
-              <span class="text text-2" aria-hidden="true">Contact Us Now</span>
-            </a>
-            <a href="tel:+14165818668" class="btn btn-secondary">
-              <span class="text text-1">Call: +1 416-581-8668</span>
-              <span class="text text-2" aria-hidden="true">Call: +1 416-581-8668</span>
-            </a>
+      <!-- Quote Section -->
+      <section class="quote-section-new" id="catering-quote">
+        <div class="quote-grid-new">
+          <div class="quote-banner-new fade-in-new">
+            <p class="quote-kicker-new">Fast Response • Downtown Toronto • 10+ Guests</p>
+            <h2 class="quote-title-new">Request a Catering Quote</h2>
+            <p class="quote-text-new">Use this form for office lunches, team meetings, condo gatherings, family events, and larger group orders. Share your date, guest count, and location, and our team will recommend suitable portions and menu options.</p>
+            <ul class="quote-points-new">
+              <li><span class="quote-dot-new"></span><span>Tell us how many guests you expect so we can help avoid over-ordering or under-ordering.</span></li>
+              <li><span class="quote-dot-new"></span><span>Vegetarian-friendly options are available, and our menu is MSG-free.</span></li>
+              <li><span class="quote-dot-new"></span><span>Please include any allergies or dietary restrictions so we can guide you properly.</span></li>
+              <li><span class="quote-dot-new"></span><span>For direct group delivery, we typically serve 10+ guests or orders of $200+ within 5km of 175 Dundas St W.</span></li>
+            </ul>
+            <div class="quote-mini-actions-new">
+              <a href="tel:+14165818668" class="btn btn-secondary">
+                <span class="text text-1">Call Catering: +1 416-581-8668</span>
+                <span class="text text-2" aria-hidden="true">Call Catering: +1 416-581-8668</span>
+              </a>
+              <a href="mailto:info@evergreenthai.com?subject=Catering%20Quote%20Request" class="btn btn-primary">
+                <span class="text text-1">Email Us</span>
+                <span class="text text-2" aria-hidden="true">Email Us</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="quote-form-wrap-new fade-in-new" id="quote-form">
+            <h3 class="quote-form-title-new">Tell Us About Your Event</h3>
+            <p class="quote-form-text-new">Fill out the form below and we’ll get back to you with catering options, pricing guidance, and next steps.</p>
+
+            <form action="https://formspree.io/f/xpqyoggq" method="POST" class="quote-form-new">
+              <div class="quote-field-new">
+                <label class="quote-label-new" for="quote-name">Full Name *</label>
+                <input class="quote-input-new" type="text" id="quote-name" name="full_name" required>
+              </div>
+
+              <div class="quote-field-new">
+                <label class="quote-label-new" for="quote-phone">Phone Number *</label>
+                <input class="quote-input-new" type="tel" id="quote-phone" name="phone_number" required>
+              </div>
+
+              <div class="quote-field-new">
+                <label class="quote-label-new" for="quote-email">Email Address *</label>
+                <input class="quote-input-new" type="email" id="quote-email" name="email" required>
+              </div>
+
+              <div class="quote-field-new">
+                <label class="quote-label-new" for="quote-date">Event Date *</label>
+                <input class="quote-input-new" type="date" id="quote-date" name="event_date" required>
+              </div>
+
+              <div class="quote-field-new">
+                <label class="quote-label-new" for="quote-time">Preferred Time</label>
+                <input class="quote-input-new" type="time" id="quote-time" name="preferred_time">
+              </div>
+
+              <div class="quote-field-new">
+                <label class="quote-label-new" for="quote-guests">Number of Guests *</label>
+                <input class="quote-input-new" type="number" id="quote-guests" name="guest_count" min="1" placeholder="e.g. 15" required>
+              </div>
+
+              <div class="quote-field-new">
+                <label class="quote-label-new" for="quote-service">Delivery or Pickup *</label>
+                <select class="quote-select-new" id="quote-service" name="service_type" required>
+                  <option value="">Select one</option>
+                  <option value="Delivery">Delivery</option>
+                  <option value="Pickup">Pickup</option>
+                </select>
+              </div>
+
+              <div class="quote-field-new">
+                <label class="quote-label-new" for="quote-type">Event Type</label>
+                <select class="quote-select-new" id="quote-type" name="event_type">
+                  <option value="">Select one</option>
+                  <option value="Office Lunch">Office Lunch</option>
+                  <option value="Corporate Meeting">Corporate Meeting</option>
+                  <option value="Birthday Party">Birthday Party</option>
+                  <option value="Family Gathering">Family Gathering</option>
+                  <option value="Condo Gathering">Condo Gathering</option>
+                  <option value="School or University Event">School or University Event</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <div class="quote-field-new full-width">
+                <label class="quote-label-new" for="quote-address">Delivery Address / Area</label>
+                <input class="quote-input-new" type="text" id="quote-address" name="delivery_address" placeholder="Building name, street, or neighbourhood">
+              </div>
+
+              <div class="quote-field-new full-width">
+                <label class="quote-label-new" for="quote-allergy">Allergies or Dietary Restrictions</label>
+                <textarea class="quote-textarea-new" id="quote-allergy" name="allergies_or_dietary" placeholder="Please let us know about allergies, spice preferences, or dietary restrictions."></textarea>
+              </div>
+
+              <div class="quote-field-new">
+                <label class="quote-label-new" for="quote-veg">Vegetarian Options Needed?</label>
+                <select class="quote-select-new" id="quote-veg" name="vegetarian_options">
+                  <option value="">Select one</option>
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+                  <option value="Not Sure Yet">Not sure yet</option>
+                </select>
+              </div>
+
+              <div class="quote-field-new">
+                <label class="quote-label-new" for="quote-budget">Approximate Budget</label>
+                <select class="quote-select-new" id="quote-budget" name="budget_range">
+                  <option value="">Select one</option>
+                  <option value="Under $200">Under $200</option>
+                  <option value="$200-$400">$200-$400</option>
+                  <option value="$400-$800">$400-$800</option>
+                  <option value="$800+">$800+</option>
+                  <option value="Not sure yet">Not sure yet</option>
+                </select>
+              </div>
+
+              <div class="quote-field-new full-width">
+                <label class="quote-label-new" for="quote-notes">Preferred Menu Items or Special Requests</label>
+                <textarea class="quote-textarea-new" id="quote-notes" name="special_requests" placeholder="Tell us which dishes you’re interested in, whether you need cutlery, or anything else we should know."></textarea>
+              </div>
+
+              <p class="quote-help-new">By submitting this form, you’re asking our team to follow up by phone or email regarding your catering inquiry.</p>
+
+              <div class="quote-submit-wrap-new">
+                <button type="submit" class="btn btn-secondary">
+                  <span class="text text-1">Get a Quote Now</span>
+                  <span class="text text-2" aria-hidden="true">Get a Quote Now</span>
+                </button>
+                <span class="quote-submit-note-new">For urgent same-day needs, please call us directly.</span>
+              </div>
+            </form>
           </div>
         </div>
       </section>
@@ -1449,7 +1805,7 @@ Vegetarian options are available. Our menu is MSG-free. Please notify us of any 
           </a>
 
           <a href="mailto:info@evergreenthai.com" class="body-4 contact-link">info@evergreenthai.com</a>
-          <a href="tel:+14165818668" class="body-4 contact-link">Booking Request: +1 416-581-8668</a>
+          <a href="tel:+14165818668" class="body-4 contact-link">Tel: +1 416-581-8668</a>
 
           <a href="https://www.google.com/maps/search/?api=1&query=Evergreen+Thai+Kitchen+%26+Bar" target="_blank" rel="noopener noreferrer">
             <p class="body-4">Open Mon–Sat: 11am – 9pm<br>Sunday: 3pm – 9pm</p>
@@ -1511,6 +1867,11 @@ Vegetarian options are available. Our menu is MSG-free. Please notify us of any 
     </div>
   </footer>
 
+  <a href="#quote-form" class="floating-quote-btn-new" aria-label="Jump to catering quote form" data-scroll-target="#quote-form">
+    <ion-icon name="chatbubble-ellipses-outline" aria-hidden="true"></ion-icon>
+    <span>Get a Quote Now</span>
+  </a>
+
   <!-- BACK TO TOP -->
   <a href="#top" class="back-top-btn active" aria-label="back to top" data-back-top-btn>
     <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
@@ -1537,13 +1898,16 @@ Vegetarian options are available. Our menu is MSG-free. Please notify us of any 
 
     document.querySelectorAll('.fade-in-new').forEach(el => observer.observe(el));
 
-    // Smooth scroll for hero button
-    const heroBtn = document.querySelector('.hero-btn-new');
-    if (heroBtn) {
-      heroBtn.addEventListener('click', () => {
-        document.querySelector('.menu-section-new').scrollIntoView({ behavior: 'smooth' });
+    // Smooth scroll for CTA buttons
+    document.querySelectorAll('[data-scroll-target]').forEach(trigger => {
+      trigger.addEventListener('click', (event) => {
+        const selector = trigger.getAttribute('data-scroll-target');
+        const target = selector ? document.querySelector(selector) : null;
+        if (!target) return;
+        event.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
-    }
+    });
   </script>
 
   <!-- Ionicon Link -->
